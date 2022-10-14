@@ -1,0 +1,125 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.auto_farmer_stage1": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"walking": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/function auto_farmer_stage1"
+					]
+				},
+				"walking": {
+					"transitions": [
+						{
+							"default": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/function auto_farmer_stage1"
+					]
+				}
+			}
+		},
+		"controller.animation.auto_farmer_stage2": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"walking": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/function auto_farmer_stage2"
+					]
+				},
+				"walking": {
+					"transitions": [
+						{
+							"default": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/function auto_farmer_stage2"
+					]
+				}
+			}
+		},
+		"controller.animation.auto_farmer_stage3": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"walking": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/function auto_farmer_stage3"
+					]
+				},
+				"walking": {
+					"transitions": [
+						{
+							"default": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/function auto_farmer_stage3"
+					]
+				}
+			}
+		},
+		"controller.animation.auto_farmer_stage4": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"walking": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/function auto_farmer_stage4"
+					]
+				},
+				"walking": {
+					"transitions": [
+						{
+							"default": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/function auto_farmer_stage4"
+					]
+				}
+			}
+		},
+		"controller.animation.auto_farmer_stage5": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"walking": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/function auto_farmer_stage5"
+					]
+				},
+				"walking": {
+					"transitions": [
+						{
+							"default": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/function auto_farmer_stage5"
+					]
+				}
+			}
+		}
+	}
+}

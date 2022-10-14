@@ -1,0 +1,17 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.hammer": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function hammer" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function hammer" ]
+        }
+      }
+    }
+  }
+}
