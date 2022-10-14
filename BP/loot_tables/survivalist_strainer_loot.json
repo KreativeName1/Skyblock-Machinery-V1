@@ -1,0 +1,44 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "dirt",
+					"weight": 15
+				},
+				{
+					"type": "item",
+					"name": "sand",
+					"weight": 15
+				},
+				{
+					"type": "item",
+					"name": "gravel",
+					"weight": 15
+				},
+				{
+					"type": "item",
+					"name": "clay_ball",
+					"weight": 20
+				},
+				{
+					"type": "item",
+					"name": "stick",
+					"weight": 15
+				},
+				{
+					"type": "item",
+					"name": "iron_nugget",
+					"weight": 10
+				},
+				{
+					"type": "item",
+					"name": "gold_nugget",
+					"weight": 10
+				}
+			]
+		}
+	]
+}

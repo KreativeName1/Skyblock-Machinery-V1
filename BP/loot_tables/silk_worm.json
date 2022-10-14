@@ -1,0 +1,18 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "ms:silk_worm",
+					"weight": 15
+				},
+				{
+					"type": "empty",
+					"weight": 85
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,61 @@
+{
+	"pools": [
+		{
+			"rolls": {
+				"min": 3,
+				"max": 5
+			},
+			"entries": [
+				{
+					"type": "item",
+					"weight": 150,
+					"name": "ms:pebble"
+				},
+				{
+					"type": "item",
+					"weight": 60,
+					"name": "minecraft:sapling"
+				},
+				{
+					"type": "item",
+					"weight": 20,
+					"name": "minecraft:apple"
+				},
+				{
+					"type": "item",
+					"weight": 15,
+					"name": "minecraft:wheat_seeds"
+				},
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "minecraft:bone_meal"
+				},
+				{
+					"type": "item",
+					"weight": 5,
+					"name": "ms:silk_worm"
+				},
+				{
+					"type": "item",
+					"weight": 5,
+					"name": "minecraft:kelp"
+				},
+				{
+					"type": "item",
+					"weight": 5,
+					"name": "minecraft:sugar_cane"
+				},
+				{
+					"type": "item",
+					"weight": 5,
+					"name": "minecraft:cactus"
+				},
+				{
+					"weight": 200,
+					"type": "empty"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,59 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "cod",
+					"weight": 15
+				},
+				{
+					"type": "item",
+					"name": "pufferfish",
+					"weight": 15
+				},
+				{
+					"type": "item",
+					"name": "tropical_fish",
+					"weight": 15
+				},
+				{
+					"type": "item",
+					"name": "salmon",
+					"weight": 15
+				},
+				{
+					"type": "item",
+					"name": "string",
+					"weight": 10
+				},
+				{
+					"type": "item",
+					"name": "leather",
+					"weight": 10
+				},
+				{
+					"type": "item",
+					"name": "rotten_flesh",
+					"weight": 10
+				},
+				{
+					"type": "item",
+					"name": "bone",
+					"weight": 7
+				},
+				{
+					"type": "item",
+					"name": "book",
+					"weight": 3,
+					"functions": [
+						{
+							"function": "enchant_randomly"
+						}
+					]
+				}
+			]
+		}
+	]
+}
