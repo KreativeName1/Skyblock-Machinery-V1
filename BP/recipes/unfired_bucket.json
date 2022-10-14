@@ -1,0 +1,25 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:unfired_bucket"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"p p",
+			" p "
+		],
+		"key": {
+			"p": {
+				"item": "ms:porcelain"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:unfired_bucket"
+			}
+		]
+	}
+}

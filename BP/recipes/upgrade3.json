@@ -1,0 +1,36 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:upgrade3"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"r": {
+				"item": "ms:steel_ingot"
+			},
+			"c": {
+				"item": "quartz"
+			},
+			"u": {
+				"item": "emerald"
+			},
+			"g": {
+				"item": "glass"
+			},
+			"t": {
+				"item": "ms:steel_gear"
+			}
+		},
+		"pattern": [
+			"rur",
+			"ctc",
+			"gug"
+		],
+		"result": {
+			"item": "ms:upgrade3"
+		}
+	}
+}

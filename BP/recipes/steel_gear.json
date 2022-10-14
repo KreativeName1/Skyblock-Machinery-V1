@@ -1,0 +1,29 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:steel_gear_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"n#n",
+			"# #",
+			"n#n"
+		],
+		"key": {
+			"#": {
+				"item": "ms:steel_ingot"
+			},
+			"n": {
+				"item": "ms:steel_nugget"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:steel_gear"
+			}
+		]
+	}
+}

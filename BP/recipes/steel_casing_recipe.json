@@ -1,0 +1,26 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:steel_casing_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"###",
+			"# #",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "ms:steel_ingot"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:steel_casing"
+			}
+		]
+	}
+}

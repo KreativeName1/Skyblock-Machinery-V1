@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:iron_mesh_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"i i",
+			"imi",
+			"i i"
+		],
+		"key": {
+			"i": {
+				"item": "iron_ingot"
+			},
+			"m": {
+				"item": "ms:sieve_mesh_string_item"
+			}
+		},
+		"result": {
+			"item": "ms:sieve_mesh_iron_item"
+		}
+	}
+}

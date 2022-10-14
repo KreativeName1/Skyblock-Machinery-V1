@@ -1,0 +1,32 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:steel_blast_furnace_part2"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"bab",
+			"aga",
+			"bab"
+		],
+		"key": {
+			"a": {
+				"item": "minecraft:red_nether_brick"
+			},
+			"g": {
+				"item": "minecraft:iron_ingot"
+			},
+			"b": {
+				"item": "minecraft:blaze_powder"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:steel_blast_furnace_part2"
+			}
+		]
+	}
+}

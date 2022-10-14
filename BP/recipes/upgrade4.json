@@ -1,0 +1,39 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:upgrade4"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"r": {
+				"item": "netherite_ingot"
+			},
+			"c": {
+				"item": "ms:upgrade1"
+			},
+			"l": {
+				"item": "ms:upgrade2"
+			},
+			"k": {
+				"item": "ms:upgrade3"
+			},
+			"u": {
+				"item": "diamond"
+			},
+			"g": {
+				"item": "glass"
+			}
+		},
+		"pattern": [
+			"rur",
+			"clk",
+			"gug"
+		],
+		"result": {
+			"item": "ms:upgrade4"
+		}
+	}
+}

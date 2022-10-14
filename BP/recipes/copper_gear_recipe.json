@@ -1,0 +1,29 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:copper_gear_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"n#n",
+			"# #",
+			"n#n"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:copper_ingot"
+			},
+			"n": {
+				"item": "ms:copper_nugget"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:copper_gear"
+			}
+		]
+	}
+}

@@ -1,0 +1,36 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:simple_pulverizer"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"bgb",
+			"cqc",
+			"sss"
+		],
+		"key": {
+			"b": {
+				"item": "blackstone"
+			},
+			"c": {
+				"item": "ms:copper_gear"
+			},
+			"g": {
+				"item": "glass"
+			},
+			"q": {
+				"item": "quartz"
+			},
+			"s": {
+				"item": "smooth_stone"
+			}
+		},
+		"result": {
+			"item": "ms:crate_simple_pulverizer"
+		}
+	}
+}

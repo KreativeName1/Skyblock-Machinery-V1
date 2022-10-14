@@ -1,0 +1,14 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "ms:electrum_dust2"
+		},
+		"tags": [
+			"furnace",
+			"blast_furnace"
+		],
+		"input": "ms:electrum_dust",
+		"output": "ms:electrum_ingot"
+	}
+}

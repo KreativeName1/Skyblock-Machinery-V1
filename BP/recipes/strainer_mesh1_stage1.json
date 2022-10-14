@@ -1,0 +1,29 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:strainer_mesh1_stage1"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"tst",
+			"sss",
+			"tst"
+		],
+		"key": {
+			"t": {
+				"item": "minecraft:stick"
+			},
+			"s": {
+				"item": "minecraft:string"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:strainer_mesh1_stage1_item"
+			}
+		]
+	}
+}

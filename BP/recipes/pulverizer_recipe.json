@@ -1,0 +1,35 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:pulverizer_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"ABA",
+			"CDC",
+			"ABA"
+		],
+		"key": {
+			"A": {
+				"item": "ms:steel_casing"
+			},
+			"B": {
+				"item": "ms:copper_gear"
+			},
+			"C": {
+				"item": "ms:steel_ingot"
+			},
+			"D": {
+				"item": "ms:machine_core"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:crate_pulverizer"
+			}
+		]
+	}
+}

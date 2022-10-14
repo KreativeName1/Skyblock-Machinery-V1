@@ -1,0 +1,14 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "ms:iron_ingot_recipe"
+		},
+		"tags": [
+			"furnace",
+			"blast_furnace"
+		],
+		"input": "ms:iron_dust",
+		"output": "minecraft:iron_ingot"
+	}
+}

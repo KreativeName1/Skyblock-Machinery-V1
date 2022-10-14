@@ -1,0 +1,29 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:electrum_gear_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"n#n",
+			"# #",
+			"n#n"
+		],
+		"key": {
+			"#": {
+				"item": "ms:electrum_ingot"
+			},
+			"n": {
+				"item": "ms:electrum_nugget"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:electrum_gear"
+			}
+		]
+	}
+}

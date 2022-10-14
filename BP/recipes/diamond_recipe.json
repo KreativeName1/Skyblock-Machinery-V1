@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:diamond_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AAA",
+			"AAA",
+			"AAA"
+		],
+		"key": {
+			"A": {
+				"item": "ms:diamond_nugget"
+			}
+		},
+		"result": [
+			{
+				"item": "minecraft:diamond",
+				"count": 1
+			}
+		]
+	}
+}

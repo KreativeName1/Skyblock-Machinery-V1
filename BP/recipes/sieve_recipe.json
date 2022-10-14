@@ -1,0 +1,32 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:sieve_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"a a",
+			"aba",
+			"c c"
+		],
+		"key": {
+			"a": {
+				"item": "minecraft:stripped_oak_log"
+			},
+			"b": {
+				"item": "minecraft:wooden_slab"
+			},
+			"c": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:crate_sieve"
+			}
+		]
+	}
+}

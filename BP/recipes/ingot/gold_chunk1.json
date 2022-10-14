@@ -1,0 +1,15 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "ms:gold_chunk1"
+		},
+		"tags": [
+			"furnace",
+			"blast_furnace"
+		],
+		"input": "ms:gold_chunk",
+		"output": "minecraft:gold_ingot"
+	}
+}
