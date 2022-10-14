@@ -1,0 +1,22 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:dried_chicken"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 6,
+				"saturation_modifier": "normal"
+			},
+			"minecraft:icon": {
+				"texture": "dried_chicken"
+			},
+			"minecraft:display_name": {
+				"value": "Dried Chicken"
+			},
+			"minecraft:use_animation": "eat"
+		}
+	}
+}

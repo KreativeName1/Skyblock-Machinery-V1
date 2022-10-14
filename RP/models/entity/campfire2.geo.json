@@ -1,0 +1,30 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.campfire2",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, -3], "size": [16, 1, 6], "uv": [0, 0]},
+						{"origin": [-8, 0, -7], "size": [16, 4, 4], "uv": [24, 30]},
+						{"origin": [-8, 0, 3], "size": [16, 4, 4], "uv": [24, 22]},
+						{"origin": [-8, 3, 3], "size": [16, 4, 4], "pivot": [0, 0, 0], "rotation": [0, 90, 0], "uv": [24, 14]},
+						{"origin": [-8, 3, -7], "size": [16, 4, 4], "pivot": [0, 0, 0], "rotation": [0, 90, 0], "uv": [24, 6]},
+						{"origin": [0, 1, -6], "size": [0, 16, 12], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 16]},
+						{"origin": [0, 1, -6], "size": [0, 16, 12], "pivot": [0, 0, 0], "rotation": [-180, 45, 180], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

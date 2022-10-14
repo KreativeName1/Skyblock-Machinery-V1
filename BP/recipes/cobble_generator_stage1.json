@@ -1,0 +1,45 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:cobble_generator_stage1"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"lil",
+			"wgf",
+			"lrl"
+		],
+		"key": {
+			"w": {
+				"item": "minecraft:water_bucket"
+			},
+			"l": {
+				"item": "minecraft:log"
+			},
+			"g": {
+				"item": "minecraft:glass"
+			},
+			"i": {
+				"item": "minecraft:iron_ingot"
+			},
+			"f": {
+				"item": "minecraft:lava_bucket"
+			},
+			"r": {
+				"item": "minecraft:redstone_block"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:crate_cobble_gen1"
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 2
+			}
+		]
+	}
+}

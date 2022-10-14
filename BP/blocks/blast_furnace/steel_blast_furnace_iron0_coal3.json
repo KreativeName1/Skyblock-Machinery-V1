@@ -1,0 +1,60 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:steel_blast_furnace_iron0_coal3"
+		},
+		"components": {
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					60,
+					75
+				],
+				"on_tick": {
+					"event": "melt"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "place"
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:geometry": "geometry.steel_blast_furnace",
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "steel_blast_furnace_iron0_coal3"
+				}
+			}
+		},
+		"events": {
+			"place": {
+				"sequence": [
+					{
+						"set_block": {
+							"block_type": "ms:steel_blast_furnace_iron0_coal4"
+						},
+						"decrement_stack": {},
+						"condition": "query.get_equipped_item_name=='charcoal'"
+					},
+					{
+						"set_block": {
+							"block_type": "ms:steel_blast_furnace_iron1_coal3"
+						},
+						"decrement_stack": {},
+						"condition": "query.get_equipped_item_name=='iron_ingot'"
+					}
+				]
+			},
+			"melt": {
+				"sequence": [
+					{
+						"set_block": {
+							"block_type": ""
+						}
+					}
+				]
+			}
+		}
+	}
+}

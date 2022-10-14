@@ -1,0 +1,37 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.handle.new": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"0.0": {
+							"pre": [
+								0,
+								-182.5,
+								0
+							],
+							"post": [
+								0,
+								-182.5,
+								0
+							]
+						},
+						"1.0": [
+							0,
+							0.01,
+							0
+						],
+						"2.0": [
+							0,
+							178.85,
+							0
+						]
+					}
+				}
+			}
+		}
+	}
+}

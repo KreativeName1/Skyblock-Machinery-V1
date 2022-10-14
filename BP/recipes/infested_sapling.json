@@ -1,0 +1,29 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:infested_sapling"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" s ",
+			"sis",
+			" s "
+		],
+		"key": {
+			"s": {
+				"item": "ms:silk_worm"
+			},
+			"i": {
+				"item": "minecraft:sapling"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:infested_sapling_placer"
+			}
+		]
+	}
+}

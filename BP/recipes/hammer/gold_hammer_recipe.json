@@ -1,0 +1,31 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:gold_hammer_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" A ",
+			" BA",
+			"B  "
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:gold_ingot"
+			},
+			"B": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:gold_hammer",
+				"count": 1
+			}
+		]
+	}
+}

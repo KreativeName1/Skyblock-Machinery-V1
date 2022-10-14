@@ -1,0 +1,97 @@
+{
+	"minecraft:block": {
+		"description": {
+			"properties": {
+				"bridge:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				]
+			},
+			"identifier": "ms:cobble_generator_stage4",
+			"is_experimental": false
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			}
+		],
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "bridge:update_rotation"
+			},
+			"minecraft:destroy_time": 1,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0.8,
+			"minecraft:geometry": "geometry.cobble_generator",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "cobble_generator_stage4",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"on_tick": {
+					"event": "spawn",
+					"target": "self"
+				},
+				"range": [
+					5,
+					5
+				]
+			}
+		},
+		"events": {
+			"bridge:update_rotation": {
+				"set_block_property": {
+					"bridge:block_rotation": "query.cardinal_facing_2d"
+				}
+			},
+			"spawn": {
+				"run_command": {
+					"command": "loot spawn ~ ~1 ~ loot cobblgenn"
+				}
+			}
+		}
+	},
+	"format_version": "1.16.100"
+}

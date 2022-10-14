@@ -1,0 +1,29 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:strainer_mesh2_stage4"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"sss",
+			"sts",
+			"sss"
+		],
+		"key": {
+			"t": {
+				"item": "ms:strainer_mesh1_stage4_item"
+			},
+			"s": {
+				"item": "minecraft:bamboo"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:strainer_mesh2_stage4_item"
+			}
+		]
+	}
+}

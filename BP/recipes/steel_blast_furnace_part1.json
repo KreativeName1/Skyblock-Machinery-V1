@@ -1,0 +1,29 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:steel_blast_furnace_part1"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"aaa",
+			"aga",
+			"aaa"
+		],
+		"key": {
+			"a": {
+				"item": "minecraft:red_nether_brick"
+			},
+			"g": {
+				"item": "minecraft:glass"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:steel_blast_furnace_part1"
+			}
+		]
+	}
+}

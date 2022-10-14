@@ -1,0 +1,76 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Kreative Name"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.3.3"
+			],
+			"dash": [
+				"0.10.2"
+			]
+		}
+	},
+	"header": {
+		"name": "Skyblock Machinery V1",
+		"description": "",
+		"min_engine_version": [
+			1,
+			18,
+			0
+		],
+		"uuid": "e7334800-6be3-4456-9f55-22822f314837",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "90a20266-1306-4c7d-a1ea-d57f0d61051e",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "c130f06b-6eaa-4ffd-816f-9b2feef69fd8",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"uuid": "b26a4d4c-afdf-4690-88f8-931846312678",
+			"version": [
+				0,
+				1,
+				0
+			]
+		},
+		{
+			"uuid": "6f4b6893-1bb6-42fd-b458-7fa3d0c89616",
+			"version": [
+				0,
+				1,
+				0
+			]
+		},
+		{
+			"uuid": "2bd50a27-ab5f-4f40-a596-3641627c635e",
+			"version": [
+				0,
+				1,
+				0
+			]
+		}
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "ms:crook"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:stick",
+				"count": 4
+			}
+		],
+		"result": [
+			{
+				"item": "minecraft:shears"
+			}
+		]
+	}
+}

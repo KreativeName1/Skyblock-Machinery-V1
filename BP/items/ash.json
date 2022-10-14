@@ -1,0 +1,16 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:ash"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Ash"
+			},
+			"minecraft:icon": {
+				"texture": "ash"
+			}
+		}
+	}
+}

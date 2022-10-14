@@ -1,0 +1,23 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:infested_sapling_placer"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "infested_sapling"
+			},
+			"minecraft:display_name": {
+				"value": "Infested Sapling"
+			},
+			"minecraft:block_placer": {
+				"block": "ms:infested_sapling",
+				"use_on": [
+					"minecraft:grass",
+					"minecraft:dirt"
+				]
+			}
+		}
+	}
+}

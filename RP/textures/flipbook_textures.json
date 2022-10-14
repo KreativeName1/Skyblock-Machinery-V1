@@ -1,0 +1,13 @@
+[
+    {
+        "flipbook_texture": "textures/BLOCKS/heater/heater_on_animation",
+        "ticks_per_frame": 4,
+        "frames": [
+            0,
+            1,
+            2
+        ],
+        "blend_frames": false,
+        "atlas_tile": "heater_on"
+    }
+]

@@ -1,0 +1,77 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:auto_farmer"
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 1,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "auto_farmer",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.auto_farmer",
+			"minecraft:on_interact": {
+				"event": "upgrade"
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					3,
+					3
+				],
+				"on_tick": {
+					"event": "farm",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"farm": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon ms:auto_farmer_stage1_entity ~ ~ ~"
+							]
+						},
+						"set_block_property": {
+							"ms:farmer": 2
+						}
+					}
+				]
+			},
+			"upgrade": {
+				"sequence": [
+					{
+						"set_block": {
+							"block_type": "ms:auto_farmer_upgrade1"
+						},
+						"condition": "query.get_equipped_item_name=='upgrade1'"
+					},
+					{
+						"set_block": {
+							"block_type": "ms:auto_farmer_upgrade2"
+						},
+						"condition": "query.get_equipped_item_name=='upgrade2'"
+					},
+					{
+						"set_block": {
+							"block_type": "ms:auto_farmer_upgrade3"
+						},
+						"condition": "query.get_equipped_item_name=='upgrade3'"
+					},
+					{
+						"set_block": {
+							"block_type": "ms:auto_farmer_upgrade4"
+						},
+						"condition": "query.get_equipped_item_name=='upgrade4'"
+					}
+				]
+			}
+		}
+	}
+}

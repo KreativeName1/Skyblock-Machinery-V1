@@ -1,0 +1,22 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:dried_porkchop"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 8,
+				"saturation_modifier": "good"
+			},
+			"minecraft:icon": {
+				"texture": "dried_porkchop"
+			},
+			"minecraft:display_name": {
+				"value": "Dried Porkchop"
+			},
+			"minecraft:use_animation": "eat"
+		}
+	}
+}

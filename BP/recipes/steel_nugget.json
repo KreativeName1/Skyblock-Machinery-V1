@@ -1,0 +1,21 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "ms:steel_nugget"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"count": 1,
+				"item": "ms:steel_ingot"
+			}
+		],
+		"result": {
+			"count": 9,
+			"item": "ms:steel_nugget"
+		}
+	}
+}

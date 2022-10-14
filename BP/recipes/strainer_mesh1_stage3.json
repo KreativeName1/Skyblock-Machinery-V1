@@ -1,0 +1,29 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:strainer_mesh1_stage3"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" s ",
+			"sts",
+			" s "
+		],
+		"key": {
+			"t": {
+				"item": "ms:strainer_mesh1_stage2_item"
+			},
+			"s": {
+				"item": "minecraft:obsidian"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:strainer_mesh1_stage3_item"
+			}
+		]
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:gold_berry"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"uuu",
+			"utu",
+			"uuu"
+		],
+		"key": {
+			"t": {
+				"item": "sweet_berries"
+			},
+			"u": {
+				"item": "gold_ingot"
+			}
+		},
+		"result": {
+			"item": "ms:gold_berry"
+		}
+	}
+}

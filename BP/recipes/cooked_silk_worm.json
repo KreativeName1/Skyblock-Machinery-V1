@@ -1,0 +1,14 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "ms:cooked_silk_worm"
+		},
+		"tags": [
+			"furnace",
+			"smoker"
+		],
+		"input": "ms:silk_worm",
+		"output": "ms:cooked_silk_worm"
+	}
+}

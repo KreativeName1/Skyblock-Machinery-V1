@@ -1,0 +1,45 @@
+{
+	"type": "minecraftBedrock",
+	"name": "Skyblock Machinery V1",
+	"namespace": "ms",
+	"authors": [
+		"Kreative Name"
+	],
+	"targetVersion": "1.18.20",
+	"description": "",
+	"experimentalGameplay": {
+		"holidayCreatorFeatures": true,
+		"creationOfCustomBiomes": true,
+		"additionalModdingCapabilities": true,
+		"upcomingCreatorFeatures": true,
+		"enableGameTestFramework": true,
+		"experimentalMolangFeatures": true,
+		"theWildUpdate": false,
+		"educationEdition": false
+	},
+	"packs": {
+		"behaviorPack": "./BP",
+		"resourcePack": "./RP"
+	},
+	"compiler": {
+		"plugins": [
+			"typeScript",
+			"entityIdentifierAlias",
+			"customEntityComponents",
+			"customItemComponents",
+			"customBlockComponents",
+			"customCommands",
+			"moLang",
+			[
+				"simpleRewrite",
+				{
+					"packName": "Skyblock Machinery V1"
+				}
+			],
+			"formatVersionCorrection"
+		]
+	},
+	"bridge": {
+		"darkTheme": "se7en.onedark"
+	}
+}

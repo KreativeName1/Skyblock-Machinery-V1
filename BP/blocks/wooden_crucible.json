@@ -1,0 +1,290 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:wooden_crucible",
+			"properties": {
+				"ms:wooden_crucible": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:destroy_time": 1,
+			"minecraft:geometry": "geometry.crucible1",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "crucible",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "interact"
+			}
+		},
+		"events": {
+			"7": {
+				"sequence": [
+					{
+						"condition": "q.get_equipped_item_name=='bucket'&&query.block_property('ms:wooden_crucible')==7",
+						"set_block_property": {
+							"ms:wooden_crucible": 1
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound bucket.fill_water @a ~ ~ ~",
+								"give @p water_bucket"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='dust'&&query.block_property('ms:wooden_crucible')==7",
+						"set_block_property": {
+							"ms:wooden_crucible": 8
+						},
+						"decrement_stack": {}
+					}
+				]
+			},
+			"interact": {
+				"sequence": [
+					{
+						"condition": "q.get_equipped_item_name=='sapling'||q.get_equipped_item_name=='leaves'&&query.block_property('ms:wooden_crucible')==1",
+						"set_block_property": {
+							"ms:wooden_crucible": 2
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound dig.grass @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='sapling'||q.get_equipped_item_name=='leaves'&&query.block_property('ms:wooden_crucible')==2",
+						"set_block_property": {
+							"ms:wooden_crucible": 3
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound dig.grass @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='sapling'||q.get_equipped_item_name=='leaves'&&query.block_property('ms:wooden_crucible')==3",
+						"set_block_property": {
+							"ms:wooden_crucible": 4
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound dig.grass @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='sapling'||q.get_equipped_item_name=='leaves'&&query.block_property('ms:wooden_crucible')==4",
+						"set_block_property": {
+							"ms:wooden_crucible": 5
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound dig.grass @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='sapling'||q.get_equipped_item_name=='leaves'&&query.block_property('ms:wooden_crucible')==5",
+						"set_block_property": {
+							"ms:wooden_crucible": 6
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound dig.grass @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='water_bucket'&&query.block_property('ms:wooden_crucible')==1",
+						"set_block_property": {
+							"ms:wooden_crucible": 7
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound bucket.empty_water @a ~ ~ ~",
+								"give @p bucket"
+							]
+						}
+					}
+				]
+			},
+			"dust": {
+				"condition": "query.block_property('ms:wooden_crucible') == 6",
+				"set_block_property": {
+					"ms:wooden_crucible": 7
+				}
+			},
+			"take_clay": {
+				"condition": "query.block_property('ms:wooden_crucible') == 8",
+				"set_block_property": {
+					"ms:wooden_crucible": 1
+				},
+				"run_command": {
+					"command": [
+						"loot spawn ~ ~1 ~ loot take_clay"
+					]
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('ms:wooden_crucible') == 2",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.crucible1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "cruciblefill",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "interact"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:wooden_crucible') == 3",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.crucible2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "cruciblefill",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "interact"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:wooden_crucible') == 4",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.crucible3",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "cruciblefill",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "interact"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:wooden_crucible') == 5",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.crucible4",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "cruciblefill",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "interact"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:wooden_crucible') == 6",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.crucible5",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "cruciblefill",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"range": [
+							100,
+							120
+						],
+						"looping": true,
+						"on_tick": {
+							"event": "dust"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:wooden_crucible') == 7",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.crucible5",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "cruciblewater",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "7"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:wooden_crucible') == 8",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.crucible5",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "crucible_clay",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "take_clay"
+					}
+				}
+			}
+		]
+	}
+}

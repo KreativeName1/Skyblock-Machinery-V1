@@ -1,0 +1,31 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:stone_hammer_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" A ",
+			" BA",
+			"B  "
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:cobblestone"
+			},
+			"B": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:stone_hammer",
+				"count": 1
+			}
+		]
+	}
+}

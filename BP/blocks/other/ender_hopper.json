@@ -1,0 +1,66 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:ender_hopper"
+		},
+		"components": {
+			"minecraft:destroy_time": 1,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "ender_hopper",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.ender_hopper",
+			"minecraft:block_light_emission": 0,
+			"minecraft:pick_collision": {
+				"origin": [
+					-7,
+					0,
+					-7
+				],
+				"size": [
+					14,
+					15,
+					14
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-7,
+					0,
+					-7
+				],
+				"size": [
+					14,
+					7,
+					14
+				]
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"on_tick": {
+					"event": "ender_teleport"
+				},
+				"range": [
+					5,
+					5
+				]
+			},
+			"minecraft:loot": "loot_tables/ender_hopperloot.json",
+			"minecraft:block_light_absorption": 0
+		},
+		"events": {
+			"ender_teleport": {
+				"run_command": {
+					"command": [
+						"tp @e[type=item,r=7] ~ ~1 ~",
+						"function ender_hopper"
+					],
+					"target": "self"
+				}
+			}
+		}
+	}
+}

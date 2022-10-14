@@ -1,0 +1,37 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:testblock"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"texture": "stone"
+				}
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:ticking": {
+				"looping": true,
+				"on_tick": {
+					"event": "test",
+					"condition": "q.block_neighbor_has_any_tag(0,1,0,'handle')==1"
+				},
+				"range": [
+					1,
+					1
+				]
+			}
+		},
+		"events": {
+			"test": {
+				"run_command": {
+					"command": [
+						"say hi"
+					]
+				}
+			}
+		}
+	}
+}

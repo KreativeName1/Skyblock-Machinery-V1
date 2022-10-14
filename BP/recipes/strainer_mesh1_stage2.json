@@ -1,0 +1,29 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:strainer_mesh1_stage2"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" s ",
+			"sts",
+			" s "
+		],
+		"key": {
+			"t": {
+				"item": "ms:strainer_mesh1_stage1_item"
+			},
+			"s": {
+				"item": "minecraft:iron_ingot"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:strainer_mesh1_stage2_item"
+			}
+		]
+	}
+}

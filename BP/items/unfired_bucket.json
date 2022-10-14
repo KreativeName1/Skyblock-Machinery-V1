@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:unfired_bucket"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "unfired_bucket"
+			},
+			"minecraft:display_name": {
+				"value": "Unfired Bucket"
+			},
+			"minecraft:max_stack_size": 16
+		}
+	}
+}

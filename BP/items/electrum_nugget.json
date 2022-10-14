@@ -1,0 +1,16 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:electrum_nugget"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "electrum_nugget"
+			},
+			"minecraft:display_name": {
+				"value": "Electrum Nugget"
+			}
+		}
+	}
+}

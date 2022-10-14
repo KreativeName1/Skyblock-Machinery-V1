@@ -1,0 +1,33 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:upgrade1"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"r": {
+				"item": "redstone"
+			},
+			"c": {
+				"item": "copper_ingot"
+			},
+			"g": {
+				"item": "glass"
+			},
+			"t": {
+				"item": "ms:copper_gear"
+			}
+		},
+		"pattern": [
+			"rcr",
+			"ctc",
+			"gcg"
+		],
+		"result": {
+			"item": "ms:upgrade1"
+		}
+	}
+}

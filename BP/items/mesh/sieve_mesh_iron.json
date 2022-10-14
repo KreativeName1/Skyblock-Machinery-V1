@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:sieve_mesh_iron_item"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "iron_sieve_mesh"
+			},
+			"minecraft:display_name": {
+				"value": "Iron Mesh"
+			},
+			"minecraft:max_stack_size": 1
+		}
+	}
+}

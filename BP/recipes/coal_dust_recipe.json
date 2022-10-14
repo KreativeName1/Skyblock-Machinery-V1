@@ -1,0 +1,24 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "ms:coal_dust_recipe"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"result": [
+			{
+				"item": "ms:coal_dust",
+				"count": 1
+			}
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:coal",
+				"data": 0,
+				"count": 1
+			}
+		]
+	}
+}

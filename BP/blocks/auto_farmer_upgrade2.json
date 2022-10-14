@@ -1,0 +1,153 @@
+	{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:auto_farmer_upgrade2",
+			"properties": {
+				"ms:farmer": [
+					1,
+					2,
+					3
+				]
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 1,
+			"minecraft:on_interact": {
+				"event": "upgrade"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "auto_farmer_upgrade2",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.auto_farmer",
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					3,
+					3
+				],
+				"on_tick": {
+					"event": "farm",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"farm": {
+				"sequence": [
+					{
+						"condition": "query.block_property('ms:farmer')==1",
+						"run_command": {
+							"command": [
+								"summon ms:auto_farmer_stage1_entity ~ ~ ~"
+							]
+						},
+						"set_block_property": {
+							"ms:farmer": 2
+						}
+					},
+					{
+						"condition": "query.block_property('ms:farmer')==2",
+						"run_command": {
+							"command": [
+								"summon ms:auto_farmer_stage2_entity ~ ~ ~"
+							]
+						},
+						"set_block_property": {
+							"ms:farmer": 3
+						}
+					},
+					{
+						"condition": "query.block_property('ms:farmer')==3",
+						"run_command": {
+							"command": [
+								"summon ms:auto_farmer_stage3_entity ~ ~ ~"
+							]
+						},
+						"set_block_property": {
+							"ms:farmer": 1
+						}
+					}
+				]
+			},
+			"upgrade": {
+				"sequence": [
+					{
+						"set_block": {
+							"block_type": "ms:auto_farmer_upgrade3"
+						},
+						"condition": "query.get_equipped_item_name=='upgrade3'"
+					},
+					{
+						"set_block": {
+							"block_type": "ms:auto_farmer_upgrade4"
+						},
+						"condition": "query.get_equipped_item_name=='upgrade4'"
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('ms:farmer')==2",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:on_interact": {
+						"event": "upgrade"
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "auto_farmer_upgrade2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.auto_farmer",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							3,
+							3
+						],
+						"on_tick": {
+							"event": "farm",
+							"target": "self"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:farmer')==3",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:on_interact": {
+						"event": "upgrade"
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "auto_farmer_upgrade2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.auto_farmer",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							3,
+							3
+						],
+						"on_tick": {
+							"event": "farm",
+							"target": "self"
+						}
+					}
+				}
+			}
+		]
+	}
+}

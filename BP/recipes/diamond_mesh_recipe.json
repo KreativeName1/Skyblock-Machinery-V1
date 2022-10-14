@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:diamond_mesh_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"i i",
+			"imi",
+			"i i"
+		],
+		"key": {
+			"i": {
+				"item": "diamond"
+			},
+			"m": {
+				"item": "ms:sieve_mesh_iron_item"
+			}
+		},
+		"result": {
+			"item": "ms:sieve_mesh_diamond_item"
+		}
+	}
+}

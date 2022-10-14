@@ -1,0 +1,29 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:cobble_generator_stage2"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"ccc",
+			"cgc",
+			"ccc"
+		],
+		"key": {
+			"c": {
+				"item": "minecraft:cobblestone"
+			},
+			"g": {
+				"item": "ms:cobble_generator_stage1"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:crate_cobble_gen2"
+			}
+		]
+	}
+}

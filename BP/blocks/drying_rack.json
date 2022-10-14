@@ -1,0 +1,916 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:drying_rack",
+			"properties": {
+				"ms:drying_rack": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15
+				]
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:on_interact": {
+				"event": "place"
+			},
+			"minecraft:block_light_emission": 0,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"north",
+							"south",
+							"east",
+							"west"
+						]
+					}
+				]
+			},
+			"minecraft:geometry": "geometry.drying_rack",
+			"bridge:rotate_y_on_place": {},
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"texture": "drying_rack_empty",
+					"face_dimming": false
+				}
+			},
+			"minecraft:destroy_time": 1,
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					13,
+					-8
+				],
+				"size": [
+					16,
+					3,
+					3
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					13,
+					-8
+				],
+				"size": [
+					16,
+					3,
+					3
+				]
+			}
+		},
+		"events": {
+			"place": {
+				"sequence": [
+					{
+						"condition": "q.get_equipped_item_name == 'beef' && query.block_property('ms:drying_rack') == 1",
+						"set_block_property": {
+							"ms:drying_rack": 2
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name == 'chicken' && query.block_property('ms:drying_rack') == 1",
+						"set_block_property": {
+							"ms:drying_rack": 3
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name == 'cod' || q.get_equipped_item_name == 'salmon' && query.block_property('ms:drying_rack') == 1",
+						"set_block_property": {
+							"ms:drying_rack": 4
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name == 'rotten_flesh' && query.block_property('ms:drying_rack') == 1",
+						"set_block_property": {
+							"ms:drying_rack": 5
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name == 'mutton' && query.block_property('ms:drying_rack') == 1",
+						"set_block_property": {
+							"ms:drying_rack": 6
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name == 'porkchop' && query.block_property('ms:drying_rack') == 1",
+						"set_block_property": {
+							"ms:drying_rack": 7
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name == 'rabbit' && query.block_property('ms:drying_rack') == 1",
+						"set_block_property": {
+							"ms:drying_rack": 8
+						},
+						"decrement_stack": {}
+					}
+				]
+			},
+			"transform": {
+				"sequence": [
+					{
+						"condition": "query.block_property('ms:drying_rack') == 2",
+						"set_block_property": {
+							"ms:drying_rack": 9
+						}
+					},
+					{
+						"condition": "query.block_property('ms:drying_rack') == 3",
+						"set_block_property": {
+							"ms:drying_rack": 10
+						}
+					},
+					{
+						"condition": "query.block_property('ms:drying_rack') == 4",
+						"set_block_property": {
+							"ms:drying_rack": 11
+						}
+					},
+					{
+						"condition": "query.block_property('ms:drying_rack') == 5",
+						"set_block_property": {
+							"ms:drying_rack": 12
+						}
+					},
+					{
+						"condition": "query.block_property('ms:drying_rack') == 6",
+						"set_block_property": {
+							"ms:drying_rack": 13
+						}
+					},
+					{
+						"condition": "query.block_property('ms:drying_rack') == 7",
+						"set_block_property": {
+							"ms:drying_rack": 14
+						}
+					},
+					{
+						"condition": "query.block_property('ms:drying_rack') == 8",
+						"set_block_property": {
+							"ms:drying_rack": 15
+						}
+					}
+				]
+			},
+			"take_dried_food": {
+				"sequence": [
+					{
+						"condition": "query.block_property('ms:drying_rack') == 9",
+						"set_block_property": {
+							"ms:drying_rack": 1
+						},
+						"run_command": {
+							"command": "loot spawn ~ ~1 ~ loot rack_dried_beef"
+						}
+					},
+					{
+						"condition": "query.block_property('ms:drying_rack') == 10",
+						"set_block_property": {
+							"ms:drying_rack": 1
+						},
+						"run_command": {
+							"command": "loot spawn ~ ~1 ~ loot rack_dried_chicken"
+						}
+					},
+					{
+						"condition": "query.block_property('ms:drying_rack') == 11",
+						"set_block_property": {
+							"ms:drying_rack": 1
+						},
+						"run_command": {
+							"command": "loot spawn ~ ~1 ~ loot rack_dried_cod"
+						}
+					},
+					{
+						"condition": "query.block_property('ms:drying_rack') == 12",
+						"set_block_property": {
+							"ms:drying_rack": 1
+						},
+						"run_command": {
+							"command": "loot spawn ~ ~1 ~ loot rack_dried_flesh"
+						}
+					},
+					{
+						"condition": "query.block_property('ms:drying_rack') == 13",
+						"set_block_property": {
+							"ms:drying_rack": 1
+						},
+						"run_command": {
+							"command": "loot spawn ~ ~1 ~ loot rack_dried_mutton"
+						}
+					},
+					{
+						"condition": "query.block_property('ms:drying_rack') == 14",
+						"set_block_property": {
+							"ms:drying_rack": 1
+						},
+						"run_command": {
+							"command": "loot spawn ~ ~1 ~ loot rack_dried_porkchop"
+						}
+					},
+					{
+						"condition": "query.block_property('ms:drying_rack') == 15",
+						"set_block_property": {
+							"ms:drying_rack": 1
+						},
+						"run_command": {
+							"command": "loot spawn ~ ~1 ~ loot rack_dried_rabbit"
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('ms:drying_rack') == 2",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:ticking": {
+						"on_tick": {
+							"event": "transform"
+						},
+						"range": [
+							80,
+							90
+						],
+						"looping": true
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:geometry": "geometry.drying_rack",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"texture": "drying_rack_beef",
+							"face_dimming": false
+						}
+					},
+					"minecraft:destroy_time": 1,
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:drying_rack') == 3",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:ticking": {
+						"on_tick": {
+							"event": "transform"
+						},
+						"range": [
+							80,
+							90
+						],
+						"looping": true
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:geometry": "geometry.drying_rack",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"texture": "drying_rack_chicken",
+							"face_dimming": false
+						}
+					},
+					"minecraft:destroy_time": 1,
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:drying_rack') == 4",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:ticking": {
+						"on_tick": {
+							"event": "transform"
+						},
+						"range": [
+							80,
+							90
+						],
+						"looping": true
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:geometry": "geometry.drying_rack",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"texture": "drying_rack_cod",
+							"face_dimming": false
+						}
+					},
+					"minecraft:destroy_time": 1,
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:drying_rack') == 5",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:ticking": {
+						"on_tick": {
+							"event": "transform"
+						},
+						"range": [
+							80,
+							90
+						],
+						"looping": true
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:geometry": "geometry.drying_rack",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"texture": "drying_rack_flesh",
+							"face_dimming": false
+						}
+					},
+					"minecraft:destroy_time": 1,
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:drying_rack') == 6",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:ticking": {
+						"on_tick": {
+							"event": "transform"
+						},
+						"range": [
+							80,
+							90
+						],
+						"looping": true
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:geometry": "geometry.drying_rack",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"texture": "drying_rack_mutton",
+							"face_dimming": false
+						}
+					},
+					"minecraft:destroy_time": 1,
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:drying_rack') == 7",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:ticking": {
+						"on_tick": {
+							"event": "transform"
+						},
+						"range": [
+							80,
+							90
+						],
+						"looping": true
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:geometry": "geometry.drying_rack",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"texture": "drying_rack_porkchop",
+							"face_dimming": false
+						}
+					},
+					"minecraft:destroy_time": 1,
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:drying_rack') == 8",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:ticking": {
+						"on_tick": {
+							"event": "transform"
+						},
+						"range": [
+							80,
+							90
+						],
+						"looping": true
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:geometry": "geometry.drying_rack",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"texture": "drying_rack_rabbit",
+							"face_dimming": false
+						}
+					},
+					"minecraft:destroy_time": 1,
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:drying_rack') == 9",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:on_interact": {
+						"event": "take_dried_food"
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:geometry": "geometry.drying_rack",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"texture": "drying_rack_dried_beef",
+							"face_dimming": false
+						}
+					},
+					"minecraft:destroy_time": 1,
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:drying_rack') == 10",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:on_interact": {
+						"event": "take_dried_food"
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:geometry": "geometry.drying_rack",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"texture": "drying_rack_dried_chicken",
+							"face_dimming": false
+						}
+					},
+					"minecraft:destroy_time": 1,
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:drying_rack') == 11",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:on_interact": {
+						"event": "take_dried_food"
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:geometry": "geometry.drying_rack",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"texture": "drying_rack_dried_cod",
+							"face_dimming": false
+						}
+					},
+					"minecraft:destroy_time": 1,
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:drying_rack') == 12",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:on_interact": {
+						"event": "take_dried_food"
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:geometry": "geometry.drying_rack",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"texture": "drying_rack_dried_flesh",
+							"face_dimming": false
+						}
+					},
+					"minecraft:destroy_time": 1,
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:drying_rack') == 13",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:on_interact": {
+						"event": "take_dried_food"
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:geometry": "geometry.drying_rack",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"texture": "drying_rack_dried_mutton",
+							"face_dimming": false
+						}
+					},
+					"minecraft:destroy_time": 1,
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:drying_rack') == 14",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:on_interact": {
+						"event": "take_dried_food"
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:geometry": "geometry.drying_rack",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"texture": "drying_rack_dried_porkchop",
+							"face_dimming": false
+						}
+					},
+					"minecraft:destroy_time": 1,
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:drying_rack') == 15",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:on_interact": {
+						"event": "take_dried_food"
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:geometry": "geometry.drying_rack",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"texture": "drying_rack_dried_rabbit",
+							"face_dimming": false
+						}
+					},
+					"minecraft:destroy_time": 1,
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							13,
+							-8
+						],
+						"size": [
+							16,
+							3,
+							3
+						]
+					}
+				}
+			}
+		]
+	}
+}

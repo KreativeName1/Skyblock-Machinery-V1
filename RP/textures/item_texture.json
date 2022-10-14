@@ -1,0 +1,336 @@
+{
+	"resource_pack_name": "bridgeRP",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"diamond_nugget": {
+			"textures": "textures/items/diamond_nugget"
+		},
+		"dried_flesh": {
+			"textures": "textures/items/dried_flesh"
+		},
+		"charcoal_dust": {
+			"textures": "textures/items/charcoal_dust"
+		},
+		"steel_ingot": {
+			"textures": "textures/items/steel_ingot"
+		},
+		"wood_hammer": {
+			"textures": "textures/items/wood_hammer"
+		},
+		"stone_hammer": {
+			"textures": "textures/items/stone_hammer"
+		},
+		"iron_hammer": {
+			"textures": "textures/items/iron_hammer"
+		},
+		"gold_hammer": {
+			"textures": "textures/items/gold_hammer"
+		},
+		"diamond_hammer": {
+			"textures": "textures/items/diamond_hammer"
+		},
+		"emerald_nugget": {
+			"textures": "textures/items/emerald_nugget"
+		},
+		"iron_dust": {
+			"textures": "textures/items/iron_dust"
+		},
+		"copper_dust": {
+			"textures": "textures/items/copper_dust"
+		},
+		"gold_dust": {
+			"textures": "textures/items/gold_dust"
+		},
+		"coal_dust": {
+			"textures": "textures/items/coal_dust"
+		},
+		"steel_casing": {
+			"textures": "textures/items/steel_casing"
+		},
+		"copper_gear": {
+			"textures": "textures/items/copper_gear"
+		},
+		"machine_core": {
+			"textures": "textures/items/machine_core"
+		},
+		"iron_piece": {
+			"textures": "textures/items/iron_piece"
+		},
+		"iron_chunk": {
+			"textures": "textures/items/iron_chunk"
+		},
+		"gold_piece": {
+			"textures": "textures/items/gold_piece"
+		},
+		"gold_chunk": {
+			"textures": "textures/items/gold_chunk"
+		},
+		"copper_piece": {
+			"textures": "textures/items/copper_piece"
+		},
+		"copper_chunk": {
+			"textures": "textures/items/copper_chunk"
+		},
+		"diamond_piece": {
+			"textures": "textures/items/diamond_piece"
+		},
+		"diamond_chunk": {
+			"textures": "textures/items/diamond_chunk"
+		},
+		"emerald_piece": {
+			"textures": "textures/items/emerald_piece"
+		},
+		"emerald_chunk": {
+			"textures": "textures/items/emerald_chunk"
+		},
+		"iron_casing": {
+			"textures": "textures/items/iron_casing"
+		},
+		"electrum_ingot": {
+			"textures": "textures/items/electrum_ingot"
+		},
+		"electrum_gear": {
+			"textures": "textures/items/electrum_gear"
+		},
+		"electrum_dust": {
+			"textures": "textures/items/electrum_dust"
+		},
+		"mesh": {
+			"textures": [
+				"textures/items/mesh"
+			]
+		},
+		"pebble": {
+			"textures": [
+				"textures/items/pebble"
+			]
+		},
+		"porcelain": {
+			"textures": [
+				"textures/items/porcelain"
+			]
+		},
+		"shears": {
+			"textures": [
+				"textures/items/shears"
+			]
+		},
+		"ash": {
+			"textures": [
+				"textures/items/ash"
+			]
+		},
+		"iron_sieve_mesh": {
+			"textures": [
+				"textures/items/iron_sieve_mesh"
+			]
+		},
+		"dried_beef": {
+			"textures": [
+				"textures/items/dried_beef"
+			]
+		},
+		"dried_chicken": {
+			"textures": [
+				"textures/items/dried_chicken"
+			]
+		},
+		"dried_cod": {
+			"textures": [
+				"textures/items/dried_cod"
+			]
+		},
+		"dried_mutton": {
+			"textures": [
+				"textures/items/dried_mutton"
+			]
+		},
+		"dried_porkchop": {
+			"textures": [
+				"textures/items/dried_porkchop"
+			]
+		},
+		"dried_rabbit": {
+			"textures": [
+				"textures/items/dried_rabbit"
+			]
+		},
+		"dried_salmon": {
+			"textures": [
+				"textures/items/dried_salmon"
+			]
+		},
+		"test": {
+			"textures": [
+				"textures/items/test"
+			]
+		},
+		"infested_sapling": {
+			"textures": [
+				"textures/items/infested_sapling"
+			]
+		},
+		"silk_worm": {
+			"textures": [
+				"textures/items/silk_worm"
+			]
+		},
+		"cooked_silk_worm": {
+			"textures": [
+				"textures/items/cooked_silk_worm"
+			]
+		},
+		"wooden_shears": {
+			"textures": [
+				"textures/items/wooden_shears"
+			]
+		},
+		"unfired_bucket": {
+			"textures": [
+				"textures/items/unfired_bucket"
+			]
+		},
+		"bucket": {
+			"textures": [
+				"textures/items/fired_bucket"
+			]
+		},
+		"bucket_lava": {
+			"textures": [
+				"textures/items/bucket_lava"
+			]
+		},
+		"bucket_water": {
+			"textures": [
+				"textures/items/bucket_water"
+			]
+		},
+		"bucket_tropical": {
+			"textures": [
+				"textures/items/bucket_tropical"
+			]
+		},
+		"bucket_cod": {
+			"textures": [
+				"textures/items/bucket_cod"
+			]
+		},
+		"bucket_salmon": {
+			"textures": [
+				"textures/items/bucket_salmon"
+			]
+		},
+		"bucket_powder_snow": {
+			"textures": [
+				"textures/items/bucket_powder_snow"
+			]
+		},
+		"bucket_pufferfish": {
+			"textures": [
+				"textures/items/bucket_pufferfish"
+			]
+		},
+		"bucket_axolotl": {
+			"textures": [
+				"textures/items/bucket_axolotl"
+			]
+		},
+		"bucket_milk": {
+			"textures": [
+				"textures/items/bucket_milk"
+			]
+		},
+		"crate": {
+			"textures": [
+				"textures/items/crate"
+			]
+		},
+		"coal_berry": {
+			"textures": "textures/items/coal_berry"
+		},
+		"iron_berry": {
+			"textures": "textures/items/iron_berry"
+		},
+		"copper_berry": {
+			"textures": "textures/items/copper_berry"
+		},
+		"redstone_berry": {
+			"textures": "textures/items/redstone_berry"
+		},
+		"diamond_berry": {
+			"textures": "textures/items/diamond_berry"
+		},
+		"emerald_berry": {
+			"textures": "textures/items/emerald_berry"
+		},
+		"gold_berry": {
+			"textures": "textures/items/gold_berry"
+		},
+		"lapis_berry": {
+			"textures": "textures/items/lapis_berry"
+		},
+		"obsidian_sieve_mesh": {
+			"textures": "textures/items/obsidian_sieve_mesh"
+		},
+		"diamond_sieve_mesh": {
+			"textures": "textures/items/diamond_sieve_mesh"
+		},
+		"strainer_mesh1_stage1": {
+			"textures": "textures/items/Strainer mesh/strainer_mesh1_stage1"
+		},
+		"strainer_mesh1_stage2": {
+			"textures": "textures/items/Strainer mesh/strainer_mesh1_stage2"
+		},
+		"strainer_mesh1_stage3": {
+			"textures": "textures/items/Strainer mesh/strainer_mesh1_stage3"
+		},
+		"strainer_mesh1_stage4": {
+			"textures": "textures/items/Strainer mesh/strainer_mesh1_stage4"
+		},
+		"strainer_mesh2_stage1": {
+			"textures": "textures/items/Strainer mesh/strainer_mesh2_stage1"
+		},
+		"strainer_mesh2_stage2": {
+			"textures": "textures/items/Strainer mesh/strainer_mesh2_stage2"
+		},
+		"strainer_mesh2_stage3": {
+			"textures": "textures/items/Strainer mesh/strainer_mesh2_stage3"
+		},
+		"strainer_mesh2_stage4": {
+			"textures": "textures/items/Strainer mesh/strainer_mesh2_stage4"
+		},
+		"steel_blast_furnace_part1": {
+			"textures": "textures/items/steel_blast_furnace_part1"
+		},
+		"steel_blast_furnace_part2": {
+			"textures": "textures/items/steel_blast_furnace_part2"
+		},
+		"hand_crank": {
+			"textures": "textures/items/hand_crank"
+		},
+		"steel_gear": {
+			"textures": "textures/items/steel_gear"
+		},
+		"steel_nugget": {
+			"textures": "textures/items/steel_nugget"
+		},
+		"electrum_nugget": {
+			"textures": "textures/items/electrum_nugget"
+		},
+		"copper_nugget": {
+			"textures": "textures/items/copper_nugget"
+		},
+		"upgrade1": {
+			"textures": "textures/items/upgade1"
+		},
+		"upgrade2": {
+			"textures": "textures/items/upgade2"
+		},
+		"upgrade3": {
+			"textures": "textures/items/upgade3"
+		},
+		"upgrade4": {
+			"textures": "textures/items/upgade4"
+		}
+	}
+}

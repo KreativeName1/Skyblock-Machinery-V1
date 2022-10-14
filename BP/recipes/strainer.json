@@ -1,0 +1,33 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:strainer"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"i i",
+			"whw",
+			"wcw"
+		],
+		"key": {
+			"c": {
+				"item": "chest"
+			},
+			"h": {
+				"item": "hopper"
+			},
+			"i": {
+				"item": "iron_bars"
+			},
+			"w": {
+				"item": "planks"
+			}
+		},
+		"result": {
+			"item": "ms:crate_strainer"
+		}
+	}
+}

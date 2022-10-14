@@ -1,0 +1,29 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:machine_core_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" A ",
+			"ABA",
+			" A "
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:quartz"
+			},
+			"B": {
+				"item": "minecraft:redstone_block"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:machine_core"
+			}
+		]
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:crucible_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"a a",
+			"a a",
+			"aba"
+		],
+		"key": {
+			"a": {
+				"item": "minecraft:log"
+			},
+			"b": {
+				"item": "minecraft:wooden_slab"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:crate_crucible"
+			}
+		]
+	}
+}

@@ -1,0 +1,874 @@
+{
+	"resource_pack_name": "bridgeRP",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"steel_block": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/steel_block"
+				}
+			]
+		},
+		"ender_hopper": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/other/ender_hopper"
+				}
+			]
+		},
+		"pulverizer_empty": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/pulverizer/pulverizer_empty"
+				}
+			]
+		},
+		"crucible": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/crucible/crucible"
+				}
+			]
+		},
+		"cruciblefill": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/crucible/cruciblefill"
+				}
+			]
+		},
+		"cruciblewater": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/crucible/cruciblewater"
+				}
+			]
+		},
+		"fired_crucible": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/crucible/fired_crucible"
+				}
+			]
+		},
+		"unfired_crucible": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/crucible/unfired_crucible"
+				}
+			]
+		},
+		"lcruciblelava": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/crucible/lcruciblelava"
+				}
+			]
+		},
+		"lcruciblefill": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/crucible/lcruciblefill"
+				}
+			]
+		},
+		"stone_barrel": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/stonebarrel/stone_barrel"
+				}
+			]
+		},
+		"stone_barrel_lava": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/stonebarrel/stone_barrel_lava"
+				}
+			]
+		},
+		"stone_barrel_water": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/stonebarrel/stone_barrel_water"
+				}
+			]
+		},
+		"stone_barrel_witchwater": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/stonebarrel/stone_barrel_witchwater"
+				}
+			]
+		},
+		"stone_barrel_obsidian": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/stonebarrel/stone_barrel_obsidian"
+				}
+			]
+		},
+		"stone_barrel_endstone": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/stonebarrel/stone_barrel_endstone"
+				}
+			]
+		},
+		"stone_barrel_blackstone": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/stonebarrel/stone_barrel_blackstone"
+				}
+			]
+		},
+		"stone_barrel_netherrack": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/stonebarrel/stone_barrel_netherrack"
+				}
+			]
+		},
+		"dust": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/other/dust"
+				}
+			]
+		},
+		"stone_barrel_soulsand": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/stonebarrel/stone_barrel_soulsand"
+				}
+			]
+		},
+		"wood_barrel": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/woodbarrel/wood_barrel"
+				}
+			]
+		},
+		"wood_barrel_water": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/woodbarrel/wood_barrel_water"
+				}
+			]
+		},
+		"wood_barrel_dirt": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/woodbarrel/wood_barrel_dirt"
+				}
+			]
+		},
+		"wood_barrel_clay": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/woodbarrel/wood_barrel_clay"
+				}
+			]
+		},
+		"wood_barrel_leave": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/woodbarrel/wood_barrel_leave"
+				}
+			]
+		},
+		"pulverizer_iron": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/pulverizer/pulverizer_iron"
+				}
+			]
+		},
+		"pulverizer_gold": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/pulverizer/pulverizer_gold"
+				}
+			]
+		},
+		"pulverizer_copper": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/pulverizer/pulverizer_copper"
+				}
+			]
+		},
+		"pulverizer_diamond": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/pulverizer/pulverizer_diamond"
+				}
+			]
+		},
+		"pulverizer_emerald": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/pulverizer/pulverizer_emerald"
+				}
+			]
+		},
+		"coal_gen_off": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/other/coal_gen_off"
+				}
+			]
+		},
+		"coal_gen_on": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/other/coal_gen_on"
+				}
+			]
+		},
+		"cobble_generator_stage1": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Cobble Generator/cobble_generator_stage1"
+				}
+			]
+		},
+		"cobble_generator_stage2": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Cobble Generator/cobble_generator_stage2"
+				}
+			]
+		},
+		"cobble_generator_stage3": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Cobble Generator/cobble_generator_stage3"
+				}
+			]
+		},
+		"cobble_generator_stage4": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Cobble Generator/cobble_generator_stage4"
+				}
+			]
+		},
+		"cobble_generator_stage5": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Cobble Generator/cobble_generator_stage5"
+				}
+			]
+		},
+		"stone_barrel_deepslate": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/stonebarrel/stone_barrel_deepslate"
+				}
+			]
+		},
+		"infested_sapling": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/other/infested_sapling"
+				}
+			]
+		},
+		"infested_leaves": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/other/infested_leaves"
+				}
+			]
+		},
+		"sieve_nomesh": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_nomesh"
+				}
+			]
+		},
+		"sieve_mesh_string": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_mesh_string"
+				}
+			]
+		},
+		"sieve_mesh_iron": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_mesh_iron"
+				}
+			]
+		},
+		"sieve_mesh_diamond": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_mesh_diamond"
+				}
+			]
+		},
+		"sieve_dirt_mesh_string": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_dirt_mesh_string"
+				}
+			]
+		},
+		"sieve_dirt_mesh_iron": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_dirt_mesh_iron"
+				}
+			]
+		},
+		"sieve_dirt_mesh_diamond": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_dirt_mesh_diamond"
+				}
+			]
+		},
+		"sieve_gravel_mesh_string": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_gravel_mesh_string"
+				}
+			]
+		},
+		"sieve_gravel_mesh_iron": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_gravel_mesh_iron"
+				}
+			]
+		},
+		"sieve_gravel_mesh_diamond": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_gravel_mesh_diamond"
+				}
+			]
+		},
+		"sieve_sand_mesh_string": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_sand_mesh_string"
+				}
+			]
+		},
+		"sieve_sand_mesh_iron": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_sand_mesh_iron"
+				}
+			]
+		},
+		"sieve_sand_mesh_diamond": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_sand_mesh_diamond"
+				}
+			]
+		},
+		"sieve_soulsand_mesh_string": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_soulsand_mesh_string"
+				}
+			]
+		},
+		"sieve_soulsand_mesh_iron": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_soulsand_mesh_iron"
+				}
+			]
+		},
+		"sieve_soulsand_mesh_diamond": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/sieve/sieve_soulsand_mesh_diamond"
+				}
+			]
+		},
+		"crucible_clay": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/crucible/crucible_clay"
+				}
+			]
+		},
+		"tank0": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Tank/tank0"
+				}
+			]
+		},
+		"tank_water1": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Tank/Tank_Water/tank1_water"
+				}
+			]
+		},
+		"tank_water2": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Tank/Tank_Water/tank2_water"
+				}
+			]
+		},
+		"tank_water3": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Tank/Tank_Water/tank3_water"
+				}
+			]
+		},
+		"tank_water4": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Tank/Tank_Water/tank4_water"
+				}
+			]
+		},
+		"tank_water5": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Tank/Tank_Water/tank5_water"
+				}
+			]
+		},
+		"tank_lava1": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Tank/Tank_Lava/tank1_lava"
+				}
+			]
+		},
+		"tank_lava2": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Tank/Tank_Lava/tank2_lava"
+				}
+			]
+		},
+		"tank_lava3": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Tank/Tank_Lava/tank3_lava"
+				}
+			]
+		},
+		"tank_lava4": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Tank/Tank_Lava/tank4_lava"
+				}
+			]
+		},
+		"tank_lava5": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Tank/Tank_Lava/tank5_lava"
+				}
+			]
+		},
+		"auto_farmer": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/auto_farmer/auto_farmer"
+				}
+			]
+		},
+		"auto_farmer_upgrade1": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/auto_farmer/auto_farmer_upgrade1"
+				}
+			]
+		},
+		"auto_farmer_upgrade2": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/auto_farmer/auto_farmer_upgrade2"
+				}
+			]
+		},
+		"auto_farmer_upgrade3": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/auto_farmer/auto_farmer_upgrade3"
+				}
+			]
+		},
+		"auto_farmer_upgrade4": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/auto_farmer/auto_farmer_upgrade4"
+				}
+			]
+		},
+		"drying_rack_beef": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_beef"
+				}
+			]
+		},
+		"drying_rack_chicken": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_chicken"
+				}
+			]
+		},
+		"drying_rack_cod": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_cod"
+				}
+			]
+		},
+		"drying_rack_flesh": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_flesh"
+				}
+			]
+		},
+		"drying_rack_mutton": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_mutton"
+				}
+			]
+		},
+		"drying_rack_porkchop": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_pork"
+				}
+			]
+		},
+		"drying_rack_rabbit": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_rabbit"
+				}
+			]
+		},
+		"drying_rack_salmon": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_salmon"
+				}
+			]
+		},
+		"drying_rack_dried_beef": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_dried_beef"
+				}
+			]
+		},
+		"drying_rack_dried_chicken": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_dried_chicken"
+				}
+			]
+		},
+		"drying_rack_dried_cod": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_dried_cod"
+				}
+			]
+		},
+		"drying_rack_dried_flesh": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_dried_flesh"
+				}
+			]
+		},
+		"drying_rack_dried_mutton": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_dried_mutton"
+				}
+			]
+		},
+		"drying_rack_dried_porkchop": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_dried_pork"
+				}
+			]
+		},
+		"drying_rack_dried_rabbit": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_dried_rabbit"
+				}
+			]
+		},
+		"drying_rack_dried_salmon": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_dried_salmon"
+				}
+			]
+		},
+		"drying_rack_empty": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Drying Rack/drying_rack_empty"
+				}
+			]
+		},
+		"spike": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/other/spike"
+				}
+			]
+		},
+		"campfire2": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/other/campfire2"
+				}
+			]
+		},
+		"strainer_nomesh": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Strainer/strainer_nomesh"
+				}
+			]
+		},
+		"strainer_mesh1_stage1": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Strainer/strainer_mesh1_stage1"
+				}
+			]
+		},
+		"strainer_mesh1_stage2": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Strainer/strainer_mesh1_stage2"
+				}
+			]
+		},
+		"strainer_mesh1_stage3": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Strainer/strainer_mesh1_stage3"
+				}
+			]
+		},
+		"strainer_mesh1_stage4": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Strainer/strainer_mesh1_stage4"
+				}
+			]
+		},
+		"strainer_mesh2_stage1": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Strainer/strainer_mesh2_stage1"
+				}
+			]
+		},
+		"strainer_mesh2_stage2": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Strainer/strainer_mesh2_stage2"
+				}
+			]
+		},
+		"strainer_mesh2_stage3": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Strainer/strainer_mesh2_stage3"
+				}
+			]
+		},
+		"strainer_mesh2_stage4": {
+			"textures": [
+				{
+					"path": "textures/BLOCKS/Strainer/strainer_mesh2_stage4"
+				}
+			]
+		},
+		"bush1": {
+			"textures": "textures/BLOCKS/ore_bushes/bush_stage1"
+		},
+		"bush2": {
+			"textures": "textures/BLOCKS/ore_bushes/bush_stage2"
+		},
+		"iron_bush3": {
+			"textures": "textures/BLOCKS/ore_bushes/iron_bush_stage3"
+		},
+		"iron_bush4": {
+			"textures": "textures/BLOCKS/ore_bushes/iron_bush_stage4"
+		},
+		"coal_bush3": {
+			"textures": "textures/BLOCKS/ore_bushes/coal_bush_stage3"
+		},
+		"coal_bush4": {
+			"textures": "textures/BLOCKS/ore_bushes/coal_bush_stage4"
+		},
+		"gold_bush3": {
+			"textures": "textures/BLOCKS/ore_bushes/gold_bush_stage3"
+		},
+		"gold_bush4": {
+			"textures": "textures/BLOCKS/ore_bushes/gold_bush_stage4"
+		},
+		"copper_bush3": {
+			"textures": "textures/BLOCKS/ore_bushes/copper_bush_stage3"
+		},
+		"copper_bush4": {
+			"textures": "textures/BLOCKS/ore_bushes/copper_bush_stage4"
+		},
+		"diamond_bush3": {
+			"textures": "textures/BLOCKS/ore_bushes/diamond_bush_stage3"
+		},
+		"diamond_bush4": {
+			"textures": "textures/BLOCKS/ore_bushes/diamond_bush_stage4"
+		},
+		"emerald_bush3": {
+			"textures": "textures/BLOCKS/ore_bushes/emerald_bush_stage3"
+		},
+		"emerald_bush4": {
+			"textures": "textures/BLOCKS/ore_bushes/emerald_bush_stage4"
+		},
+		"redstone_bush3": {
+			"textures": "textures/BLOCKS/ore_bushes/redstone_bush_stage3"
+		},
+		"redstone_bush4": {
+			"textures": "textures/BLOCKS/ore_bushes/redstone_bush_stage4"
+		},
+		"lapis_bush3": {
+			"textures": "textures/BLOCKS/ore_bushes/lapis_bush_stage3"
+		},
+		"lapis_bush4": {
+			"textures": "textures/BLOCKS/ore_bushes/lapis_bush_stage4"
+		},
+		"infesting_leaves": {
+			"textures": "textures/BLOCKS/other/infesting_leaves"
+		},
+		"steel_blast_furnace_iron0_coal0": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron0_coal0"
+		},
+		"steel_blast_furnace_iron0_coal1": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron0_coal1"
+		},
+		"steel_blast_furnace_iron0_coal2": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron0_coal2"
+		},
+		"steel_blast_furnace_iron0_coal3": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron0_coal3"
+		},
+		"steel_blast_furnace_iron0_coal4": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron0_coal4"
+		},
+		"steel_blast_furnace_iron1_coal0": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron1_coal0"
+		},
+		"steel_blast_furnace_iron1_coal1": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron1_coal1"
+		},
+		"steel_blast_furnace_iron1_coal2": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron1_coal2"
+		},
+		"steel_blast_furnace_iron1_coal3": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron1_coal3"
+		},
+		"steel_blast_furnace_iron1_coal4": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron1_coal4"
+		},
+		"steel_blast_furnace_iron2_coal0": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron2_coal0"
+		},
+		"steel_blast_furnace_iron2_coal1": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron2_coal1"
+		},
+		"steel_blast_furnace_iron2_coal2": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron2_coal2"
+		},
+		"steel_blast_furnace_iron2_coal3": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron2_coal3"
+		},
+		"steel_blast_furnace_iron2_coal4": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron2_coal4"
+		},
+		"steel_blast_furnace_iron3_coal0": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron3_coal0"
+		},
+		"steel_blast_furnace_iron3_coal1": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron3_coal1"
+		},
+		"steel_blast_furnace_iron3_coal2": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron3_coal2"
+		},
+		"steel_blast_furnace_iron3_coal3": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron3_coal3"
+		},
+		"steel_blast_furnace_iron3_coal4": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron3_coal4"
+		},
+		"steel_blast_furnace_iron4_coal0": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron4_coal0"
+		},
+		"steel_blast_furnace_iron4_coal1": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron4_coal1"
+		},
+		"steel_blast_furnace_iron4_coal2": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron4_coal2"
+		},
+		"steel_blast_furnace_iron4_coal3": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron4_coal3"
+		},
+		"steel_blast_furnace_iron4_coal4": {
+			"textures": "textures/BLOCKS/steel_blast_furnace/steel_blast_furnace_iron4_coal4"
+		},
+		"handle": {
+			"textures": "textures/BLOCKS/other/handle"
+		},
+		"simple_pulverizer": {
+			"textures": "textures/BLOCKS/pulverizer/simple_pulverizer"
+		},
+		"simple_pulverizer_copper": {
+			"textures": "textures/BLOCKS/pulverizer/simple_pulverizer_copper"
+		},
+		"simple_pulverizer_iron": {
+			"textures": "textures/BLOCKS/pulverizer/simple_pulverizer_iron"
+		},
+		"simple_pulverizer_gold": {
+			"textures": "textures/BLOCKS/pulverizer/simple_pulverizer_gold"
+		},
+		"simple_pulverizer_diamond": {
+			"textures": "textures/BLOCKS/pulverizer/simple_pulverizer_diamond"
+		},
+		"simple_pulverizer_emerald": {
+			"textures": "textures/BLOCKS/pulverizer/simple_pulverizer_emerald"
+		},
+		"heater_off": {
+			"textures": "textures/BLOCKS/heater/heater_off"
+		},
+		"heater_on": {
+			"textures": "textures/BLOCKS/heater/heater_on"
+		}
+	}
+}

@@ -1,0 +1,36 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:auto_farmer"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"s": {
+				"item": "emerald"
+			},
+			"c": {
+				"item": "ms:steel_casing"
+			},
+			"g": {
+				"item": "glass"
+			},
+			"h": {
+				"item": "diamond_hoe"
+			},
+			"m": {
+				"item": "ms:machine_core"
+			}
+		},
+		"pattern": [
+			"shs",
+			"gmg",
+			"chc"
+		],
+		"result": {
+			"item": "ms:crate_auto_farmer"
+		}
+	}
+}

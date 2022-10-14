@@ -1,0 +1,31 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "ms:porcelain"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:clay_ball",
+				"count": 1
+			},
+			{
+				"count": 1,
+				"item": "minecraft:dye",
+				"data": 15
+			},
+			{
+				"item": "ms:ash"
+			}
+		],
+		"result": [
+			{
+				"item": "ms:porcelain",
+				"count": 1
+			}
+		]
+	}
+}

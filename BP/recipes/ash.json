@@ -1,0 +1,13 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "ms:ash"
+		},
+		"tags": [
+			"furnace"
+		],
+		"input": "minecraft:stick",
+		"output": "ms:ash"
+	}
+}

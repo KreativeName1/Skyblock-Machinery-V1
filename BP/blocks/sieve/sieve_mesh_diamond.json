@@ -1,0 +1,805 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:sieve_mesh_diamond",
+			"properties": {
+				"ms:sieve": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13
+				]
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:destroy_time": 1,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "sieve_mesh_diamond"
+				}
+			},
+			"minecraft:geometry": "geometry.sieve_state1",
+			"minecraft:entity_collision": {
+				"origin": [
+					-7,
+					0,
+					-7
+				],
+				"size": [
+					14,
+					16,
+					14
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-7,
+					0,
+					-7
+				],
+				"size": [
+					14,
+					16,
+					14
+				]
+			},
+			"minecraft:on_interact": {
+				"event": "interact"
+			}
+		},
+		"events": {
+			"interact": {
+				"sequence": [
+					{
+						"condition": "q.is_sneaking&&query.block_property('ms:sieve')==1",
+						"set_block": {
+							"block_type": "ms:sieve"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/sieve_mesh_diamond.json"
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='gravel'&&query.block_property('ms:sieve')==1",
+						"set_block_property": {
+							"ms:sieve": 2
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound block.composter.fill @a ~ ~ ~ 100 1.5"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='dirt'&&query.block_property('ms:sieve')==1",
+						"set_block_property": {
+							"ms:sieve": 5
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound block.composter.fill @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='sand'&&query.block_property('ms:sieve')==1",
+						"set_block_property": {
+							"ms:sieve": 8
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound dig.sand @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='soul_sand'&&query.block_property('ms:sieve')==1",
+						"set_block_property": {
+							"ms:sieve": 11
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound dig.sand @a ~ ~ ~"
+							]
+						}
+					}
+				]
+			},
+			"gravel2": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"ms:sieve": 3
+						},
+						"run_command": {
+							"command": [
+								"playsound block.composter.fill @p ~ ~ ~ 100 1.5"
+							]
+						}
+					}
+				]
+			},
+			"gravel3": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"ms:sieve": 4
+						},
+						"run_command": {
+							"command": [
+								"playsound block.composter.fill @p ~ ~ ~ 100 1.5"
+							]
+						}
+					}
+				]
+			},
+			"gravel_loot": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"ms:sieve": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot  sieve_gravel_diamond_loot",
+								"playsound block.composter.fill @p ~ ~ ~ 100 1.5"
+							]
+						}
+					}
+				]
+			},
+			"dirt2": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"ms:sieve": 6
+						},
+						"run_command": {
+							"command": [
+								"playsound block.composter.fill @p ~ ~ ~ 100 1.5"
+							]
+						}
+					}
+				]
+			},
+			"dirt3": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"ms:sieve": 7
+						},
+						"run_command": {
+							"command": [
+								"playsound block.composter.fill @p ~ ~ ~ 100 1.5"
+							]
+						}
+					}
+				]
+			},
+			"dirt_loot": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"ms:sieve": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot sieve_dirt_diamond_loot",
+								"playsound block.composter.fill @p ~ ~ ~ 100 1.5"
+							]
+						}
+					}
+				]
+			},
+			"sand2": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"ms:sieve": 9
+						},
+						"run_command": {
+							"command": [
+								"playsound dig.sand @a ~ ~ ~ 100 1.5"
+							]
+						}
+					}
+				]
+			},
+			"sand3": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"ms:sieve": 10
+						},
+						"run_command": {
+							"command": [
+								"playsound dig.sand @a ~ ~ ~ 100 1.5"
+							]
+						}
+					}
+				]
+			},
+			"sand_loot": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"ms:sieve": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot sieve_sand_diamond_loot",
+								"playsound dig.sand @a ~ ~ ~ 100 1.5"
+							]
+						}
+					}
+				]
+			},
+			"soulsand2": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"ms:sieve": 12
+						},
+						"run_command": {
+							"command": [
+								"playsound dig.sand @a ~ ~ ~ 100 1.5"
+							]
+						}
+					}
+				]
+			},
+			"soulsand3": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"ms:sieve": 13
+						},
+						"run_command": {
+							"command": [
+								"playsound dig.sand @a ~ ~ ~ 100 1.5"
+							]
+						}
+					}
+				]
+			},
+			"soulsand_loot": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"ms:sieve": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot sieve_soulsand_diamond_loot",
+								"playsound dig.sand @a ~ ~ ~ 100 1.5"
+							]
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('ms:sieve') == 2",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "sieve_gravel_mesh_diamond"
+						}
+					},
+					"minecraft:geometry": "geometry.sieve_state1",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "gravel2"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:sieve') == 3",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "sieve_gravel_mesh_diamond"
+						}
+					},
+					"minecraft:geometry": "geometry.sieve_state2",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "gravel3"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:sieve') == 4",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "sieve_gravel_mesh_diamond"
+						}
+					},
+					"minecraft:geometry": "geometry.sieve_state3",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "gravel_loot"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:sieve') == 5",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "sieve_dirt_mesh_diamond"
+						}
+					},
+					"minecraft:geometry": "geometry.sieve_state1",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "dirt2"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:sieve') == 6",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "sieve_dirt_mesh_diamond"
+						}
+					},
+					"minecraft:geometry": "geometry.sieve_state2",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "dirt3"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:sieve') == 7",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "sieve_dirt_mesh_diamond"
+						}
+					},
+					"minecraft:geometry": "geometry.sieve_state3",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "dirt_loot"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:sieve') == 8",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "sieve_sand_mesh_diamond"
+						}
+					},
+					"minecraft:geometry": "geometry.sieve_state1",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "sand2"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:sieve') == 9",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "sieve_sand_mesh_diamond"
+						}
+					},
+					"minecraft:geometry": "geometry.sieve_state2",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "sand3"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:sieve') == 10",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "sieve_sand_mesh_diamond"
+						}
+					},
+					"minecraft:geometry": "geometry.sieve_state3",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "sand_loot"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:sieve') == 11",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "sieve_soulsand_mesh_diamond"
+						}
+					},
+					"minecraft:geometry": "geometry.sieve_state1",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "soulsand2"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:sieve') == 12",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "sieve_soulsand_mesh_diamond"
+						}
+					},
+					"minecraft:geometry": "geometry.sieve_state2",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "soulsand3"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:sieve') == 13",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "sieve_soulsand_mesh_diamond"
+						}
+					},
+					"minecraft:geometry": "geometry.sieve_state3",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							16,
+							14
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "soulsand_loot"
+					}
+				}
+			}
+		]
+	}
+}

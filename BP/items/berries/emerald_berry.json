@@ -1,0 +1,44 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:emerald_berry",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "emerald_berry"
+			},
+			"minecraft:display_name": {
+				"value": "Emerald Berries"
+			},
+			"minecraft:food": {
+				"can_always_eat": true,
+				"on_consume": {
+					"event": "eat"
+				},
+				"nutrition": 2,
+				"saturation_modifier": "low"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_duration": 1.4,
+			"minecraft:block_placer": {
+				"use_on": [
+					"dirt",
+					"grass"
+				],
+				"block": "ms:emerald_bush_s1"
+			}
+		},
+		"events": {
+			"eat": {
+				"add_mob_effect": {
+					"visible": true,
+					"effect": "water_breathing",
+					"amplifier": 2,
+					"duration": 7
+				}
+			}
+		}
+	}
+}
