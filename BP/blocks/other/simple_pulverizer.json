@@ -1,0 +1,234 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:simple_pulverizer",
+			"properties": {
+				"ms:simple_pulverizer": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.dust",
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "simple_pulverizer"
+				}
+			},
+			"minecraft:destroy_time": 2,
+			"minecraft:on_interact": {
+				"event": "place"
+			}
+		},
+		"events": {
+			"place": {
+				"sequence": [
+					{
+						"condition": "query.block_property('ms:simple_pulverizer')==1&&query.get_equipped_item_name=='iron_chunk'",
+						"set_block_property": {
+							"ms:simple_pulverizer": 2
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.block_property('ms:simple_pulverizer')==1&&query.get_equipped_item_name=='gold_chunk'",
+						"set_block_property": {
+							"ms:simple_pulverizer": 3
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.block_property('ms:simple_pulverizer')==1&&query.get_equipped_item_name=='emerald_chunk'",
+						"set_block_property": {
+							"ms:simple_pulverizer": 4
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.block_property('ms:simple_pulverizer')==1&&query.get_equipped_item_name=='diamond_chunk'",
+						"set_block_property": {
+							"ms:simple_pulverizer": 5
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.block_property('ms:simple_pulverizer')==1&&query.get_equipped_item_name=='copper_chunk'",
+						"set_block_property": {
+							"ms:simple_pulverizer": 6
+						},
+						"decrement_stack": {}
+					}
+				]
+			},
+			"iron": {
+				"set_block_property": {
+					"ms:simple_pulverizer": 1
+				},
+				"spawn_loot": {
+					"table": "loot_tables/chunk_ironloot.json"
+				}
+			},
+			"gold": {
+				"set_block_property": {
+					"ms:simple_pulverizer": 1
+				},
+				"spawn_loot": {
+					"table": "loot_tables/chunk_goldloot.json"
+				}
+			},
+			"emerald": {
+				"set_block_property": {
+					"ms:simple_pulverizer": 1
+				},
+				"spawn_loot": {
+					"table": "loot_tables/emeraldloot.json"
+				}
+			},
+			"diamond": {
+				"set_block_property": {
+					"ms:simple_pulverizer": 1
+				},
+				"spawn_loot": {
+					"table": "loot_tables/diamondloot.json"
+				}
+			},
+			"copper": {
+				"set_block_property": {
+					"ms:simple_pulverizer": 1
+				},
+				"spawn_loot": {
+					"table": "loot_tables/chunk_copperloot.json"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('ms:simple_pulverizer') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.dust",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "simple_pulverizer_iron"
+						}
+					},
+					"minecraft:destroy_time": 2,
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "iron",
+							"condition": "q.block_neighbor_has_any_tag(0,1,0,'handle')==1"
+						},
+						"range": [
+							1,
+							1
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:simple_pulverizer') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.dust",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "simple_pulverizer_gold"
+						}
+					},
+					"minecraft:destroy_time": 2,
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "gold",
+							"condition": "q.block_neighbor_has_any_tag(0,1,0,'handle')==1"
+						},
+						"range": [
+							1,
+							1
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:simple_pulverizer') == 4",
+				"components": {
+					"minecraft:geometry": "geometry.dust",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "simple_pulverizer_emerald"
+						}
+					},
+					"minecraft:destroy_time": 2,
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "emerald",
+							"condition": "q.block_neighbor_has_any_tag(0,1,0,'handle')==1"
+						},
+						"range": [
+							1,
+							1
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:simple_pulverizer') == 5",
+				"components": {
+					"minecraft:geometry": "geometry.dust",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "simple_pulverizer_diamond"
+						}
+					},
+					"minecraft:destroy_time": 2,
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "diamond",
+							"condition": "q.block_neighbor_has_any_tag(0,1,0,'handle')==1"
+						},
+						"range": [
+							1,
+							1
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:simple_pulverizer') == 6",
+				"components": {
+					"minecraft:geometry": "geometry.dust",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "simple_pulverizer_copper"
+						}
+					},
+					"minecraft:destroy_time": 2,
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "copper",
+							"condition": "q.block_neighbor_has_any_tag(0,1,0,'handle')==1"
+						},
+						"range": [
+							1,
+							1
+						]
+					}
+				}
+			}
+		]
+	}
+}

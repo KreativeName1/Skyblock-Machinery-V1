@@ -1,0 +1,690 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:stone_barrel",
+			"properties": {
+				"ms:stone_barrel": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11
+				]
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:geometry": "geometry.barrel7",
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "stone_barrel"
+				}
+			},
+			"minecraft:block_light_emission": 0,
+			"minecraft:destroy_time": 1,
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					16,
+					12
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					16,
+					12
+				]
+			},
+			"minecraft:on_interact": {
+				"event": "fill_liquid"
+			}
+		},
+		"events": {
+			"fill_liquid": {
+				"sequence": [
+					{
+						"condition": "q.get_equipped_item_name=='lava_bucket' && query.block_property('ms:stone_barrel') == 1",
+						"set_block_property": {
+							"ms:stone_barrel": 2
+						},
+						"run_command": {
+							"command": [
+								"give @p bucket",
+								"playsound bucket.empty_lava @a ~ ~ ~"
+							]
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='water_bucket' && query.block_property('ms:stone_barrel') == 1",
+						"set_block_property": {
+							"ms:stone_barrel": 3
+						},
+						"run_command": {
+							"command": [
+								"give @p bucket",
+								"playsound bucket.empty_water @a ~ ~ ~"
+							]
+						},
+						"decrement_stack": {}
+					}
+				]
+			},
+			"fill": {
+				"sequence": [
+					{
+						"condition": "q.get_equipped_item_name=='coal_dust' && query.block_property('ms:stone_barrel') == 2",
+						"set_block_property": {
+							"ms:stone_barrel": 4
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound liquid.lavapop @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='ash' && query.block_property('ms:stone_barrel') == 2",
+						"set_block_property": {
+							"ms:stone_barrel": 5
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound liquid.lavapop @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='glowstone_dust' && query.block_property('ms:stone_barrel') == 2",
+						"set_block_property": {
+							"ms:stone_barrel": 6
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound liquid.lavapop @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='redstone' && query.block_property('ms:stone_barrel') == 2",
+						"set_block_property": {
+							"ms:stone_barrel": 7
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound liquid.lavapop @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='water_bucket' && query.block_property('ms:stone_barrel') == 2",
+						"set_block_property": {
+							"ms:stone_barrel": 8
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound liquid.lavapop @a ~ ~ ~",
+								"give @p bucket"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='mycelium' && query.block_property('ms:stone_barrel') == 1",
+						"set_block_property": {
+							"ms:stone_barrel": 9
+						},
+						"run_command": {
+							"command": [
+								"playsound random.pop @a ~ ~ ~"
+							]
+						}
+					}
+				]
+			},
+			"take": {
+				"sequence": [
+					{
+						"condition": "query.block_property('ms:stone_barrel') == 4",
+						"set_block_property": {
+							"ms:stone_barrel": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot take_blackstone"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('ms:stone_barrel') == 5",
+						"set_block_property": {
+							"ms:stone_barrel": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot take_deepslate"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('ms:stone_barrel') == 6",
+						"set_block_property": {
+							"ms:stone_barrel": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot take_endstone"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('ms:stone_barrel') == 7",
+						"set_block_property": {
+							"ms:stone_barrel": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot take_netherrack"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('ms:stone_barrel') == 8",
+						"set_block_property": {
+							"ms:stone_barrel": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot take_obsidian"
+							]
+						}
+					}
+				]
+			},
+			"water2": {
+				"set_block_property": {
+					"ms:stone_barrel": 9
+				},
+				"condition": "query.block_property('ms:stone_barrel') == 3",
+				"run_command": {
+					"command": "playsound random.pop @a ~ ~ ~ 1 1"
+				}
+			},
+			"transform": {
+				"set_block_property": {
+					"ms:stone_barrel": 10
+				},
+				"condition": "query.block_property('ms:stone_barrel') == 9"
+			},
+			"soulsand": {
+				"condition": "q.get_equipped_item_name == 'sand' && query.block_property('ms:stone_barrel') == 10",
+				"set_block_property": {
+					"ms:stone_barrel": 11
+				},
+				"decrement_stack": {}
+			},
+			"take_soulsand": {
+				"condition": "query.block_property('ms:stone_barrel') == 11",
+				"set_block_property": {
+					"ms:stone_barrel": 1
+				},
+				"run_command": {
+					"command": "loot spawn ~ ~1 ~ loot take_soulsand"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('ms:stone_barrel') == 2",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:geometry": "geometry.barrel7",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "stone_barrel_lava"
+						}
+					},
+					"minecraft:block_light_emission": 1,
+					"minecraft:destroy_time": 1,
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "fill"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:stone_barrel') == 3",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:geometry": "geometry.barrel7",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "stone_barrel_water"
+						}
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "water2",
+						"condition": "query.get_equipped_item_name == 'mycelium'"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:stone_barrel') == 4",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:geometry": "geometry.barrel7",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "stone_barrel_blackstone"
+						}
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "take"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:stone_barrel') == 5",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:geometry": "geometry.barrel7",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "stone_barrel_deepslate"
+						}
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "take"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:stone_barrel') == 6",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:geometry": "geometry.barrel7",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "stone_barrel_endstone"
+						}
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "take"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:stone_barrel') == 7",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:geometry": "geometry.barrel7",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "stone_barrel_netherrack"
+						}
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "take"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:stone_barrel') == 8",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:geometry": "geometry.barrel7",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "stone_barrel_obsidian"
+						}
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "take"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:stone_barrel') == 9",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:geometry": "geometry.barrel7",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "stone_barrel_water"
+						}
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "transform"
+						},
+						"range": [
+							30,
+							35
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:stone_barrel') == 10",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:geometry": "geometry.barrel7",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "stone_barrel_witchwater"
+						}
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "soulsand"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:stone_barrel') == 11",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:geometry": "geometry.barrel7",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "stone_barrel_soulsand"
+						}
+					},
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "take_soulsand"
+					}
+				}
+			}
+		]
+	}
+}

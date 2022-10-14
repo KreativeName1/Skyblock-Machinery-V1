@@ -1,0 +1,790 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:tank",
+			"properties": {
+				"ms:tank": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11
+				]
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:destroy_time": 1,
+			"minecraft:geometry": "geometry.tank_state0u1",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "tank0",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					16,
+					12
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					16,
+					12
+				]
+			},
+			"minecraft:on_interact": {
+				"event": "interact"
+			}
+		},
+		"events": {
+			"interact": {
+				"sequence": [
+					{
+						"condition": "q.get_equipped_item_name=='water_bucket'&&query.block_property('ms:tank')==1",
+						"set_block_property": {
+							"ms:tank": 2
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.empty_water @a ~ ~ ~",
+								"give @p bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='water_bucket'&&query.block_property('ms:tank')==2",
+						"set_block_property": {
+							"ms:tank": 3
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.empty_water @a ~ ~ ~",
+								"give @p bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='water_bucket'&&query.block_property('ms:tank')==3",
+						"set_block_property": {
+							"ms:tank": 4
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.empty_water @a ~ ~ ~",
+								"give @p bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='water_bucket'&&query.block_property('ms:tank')==4",
+						"set_block_property": {
+							"ms:tank": 5
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.empty_water @a ~ ~ ~",
+								"give @p bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='water_bucket'&&query.block_property('ms:tank')==5",
+						"set_block_property": {
+							"ms:tank": 6
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.empty_water @a ~ ~ ~",
+								"give @p bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='lava_bucket'&&query.block_property('ms:tank')==1",
+						"set_block_property": {
+							"ms:tank": 7
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.empty_lava @a ~ ~ ~",
+								"give @p bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='lava_bucket'&&query.block_property('ms:tank')==7",
+						"set_block_property": {
+							"ms:tank": 8
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.empty_lava @a ~ ~ ~",
+								"give @p bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='lava_bucket'&&query.block_property('ms:tank')==8",
+						"set_block_property": {
+							"ms:tank": 9
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.empty_lava @a ~ ~ ~",
+								"give @p bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='lava_bucket'&&query.block_property('ms:tank')==9",
+						"set_block_property": {
+							"ms:tank": 10
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.empty_lava @a ~ ~ ~",
+								"give @p bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='lava_bucket'&&query.block_property('ms:tank')==10",
+						"set_block_property": {
+							"ms:tank": 11
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.empty_lava @a ~ ~ ~",
+								"give @p bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='bucket'&&query.block_property('ms:tank')==2",
+						"set_block_property": {
+							"ms:tank": 1
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.fill_water @a ~ ~ ~",
+								"give @p water_bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='bucket'&&query.block_property('ms:tank')==3",
+						"set_block_property": {
+							"ms:tank": 2
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.fill_water @a ~ ~ ~",
+								"give @p water_bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='bucket'&&query.block_property('ms:tank')==4",
+						"set_block_property": {
+							"ms:tank": 3
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.fill_water @a ~ ~ ~",
+								"give @p water_bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='bucket'&&query.block_property('ms:tank')==5",
+						"set_block_property": {
+							"ms:tank": 4
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.fill_water @a ~ ~ ~",
+								"give @p water_bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='bucket'&&query.block_property('ms:tank')==6",
+						"set_block_property": {
+							"ms:tank": 5
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.fill_water @a ~ ~ ~",
+								"give @p water_bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='bucket'&&query.block_property('ms:tank')==7",
+						"set_block_property": {
+							"ms:tank": 1
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.fill_lava @a ~ ~ ~",
+								"give @p lava_bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='bucket'&&query.block_property('ms:tank')==8",
+						"set_block_property": {
+							"ms:tank": 7
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.fill_lava @a ~ ~ ~",
+								"give @p lava_bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='bucket'&&query.block_property('ms:tank')==9",
+						"set_block_property": {
+							"ms:tank": 8
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.fill_lava @a ~ ~ ~",
+								"give @p lava_bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='bucket'&&query.block_property('ms:tank')==10",
+						"set_block_property": {
+							"ms:tank": 9
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.fill_lava @a ~ ~ ~",
+								"give @p lava_bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='bucket'&&query.block_property('ms:tank')==11",
+						"set_block_property": {
+							"ms:tank": 10
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.fill_lava @a ~ ~ ~",
+								"give @p lava_bucket"
+							]
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('ms:tank') == 2",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.tank_state0u1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "tank_water1",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "interact"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:tank') == 3",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.tank_state2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "tank_water2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "interact"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:tank') == 4",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.tank_state3",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "tank_water3",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "interact"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:tank') == 5",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.tank_state4u5",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "tank_water4",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "interact"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:tank') == 6",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.tank_state4u5",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "tank_water5",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "interact"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:tank') == 7",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0.4,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.tank_state0u1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "tank_lava1",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "interact"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:tank') == 8",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0.4,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.tank_state2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "tank_lava2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "interact"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:tank') == 9",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0.6,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.tank_state3",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "tank_lava3",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "interact"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:tank') == 10",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0.8,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.tank_state4u5",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "tank_lava4",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "interact"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:tank') == 11",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 1,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.tank_state4u5",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "tank_lava5",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "interact"
+					}
+				}
+			}
+		]
+	}
+}

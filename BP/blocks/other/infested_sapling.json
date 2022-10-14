@@ -1,0 +1,89 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:infested_sapling"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "infested_sapling",
+					"render_method": "blend",
+					"face_dimming": false
+				}
+			},
+			"minecraft:geometry": "geometry.infested_sapling",
+			"minecraft:loot": "loot_tables/infested_sapling.json",
+			"minecraft:ticking": {
+				"on_tick": {
+					"event": "grow"
+				},
+				"range": [
+					30,
+					60
+				]
+			},
+			"minecraft:entity_collision": {
+				"size": [
+					0,
+					0,
+					0
+				],
+				"origin": [
+					-8,
+					0,
+					-8
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					14,
+					13,
+					14
+				]
+			},
+			"minecraft:on_interact": {
+				"event": "grow2",
+				"condition": "query.get_equipped_item_name=='bone_meal'"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "place"
+			},
+			"minecraft:on_placed": {
+				"event": "place"
+			}
+		},
+		"events": {
+			"grow": {
+				"run_command": {
+					"command": [
+						"function infested_tree"
+					]
+				}
+			},
+			"grow2": {
+				"run_command": {
+					"command": [
+						"function infested_tree",
+						"particle minecraft:crop_growth_emitter ~ ~ ~"
+					]
+				},
+				"decrement_stack": {}
+			},
+			"place": {
+				"run_command": {
+					"command": [
+						"playsound place.azalea_leaves @a ~ ~ ~"
+					]
+				}
+			}
+		}
+	}
+}

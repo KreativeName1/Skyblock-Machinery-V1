@@ -1,0 +1,476 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:strainer",
+			"properties": {
+				"ms:strainer": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:destroy_time": 1,
+			"minecraft:geometry": "geometry.strainer",
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "strainer_nomesh"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "place_mesh"
+			}
+		},
+		"events": {
+			"place_mesh": {
+				"sequence": [
+					{
+						"condition": "q.get_equipped_item_name=='strainer_mesh1_stage1_item'&&query.block_property('ms:strainer')==1",
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound random.pop @a ~ ~ ~ 1 1"
+							]
+						},
+						"set_block_property": {
+							"ms:strainer": 2
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='strainer_mesh1_stage2_item'&&query.block_property('ms:strainer')==1",
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound random.pop @a ~ ~ ~ 1 1"
+							]
+						},
+						"set_block_property": {
+							"ms:strainer": 3
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='strainer_mesh1_stage3_item'&&query.block_property('ms:strainer')==1",
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound random.pop @a ~ ~ ~ 1 1"
+							]
+						},
+						"set_block_property": {
+							"ms:strainer": 4
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='strainer_mesh1_stage4_item'&&query.block_property('ms:strainer')==1",
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound random.pop @a ~ ~ ~ 1 1"
+							]
+						},
+						"set_block_property": {
+							"ms:strainer": 5
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='strainer_mesh2_stage1_item'&&query.block_property('ms:strainer')==1",
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound random.pop @a ~ ~ ~ 1 1"
+							]
+						},
+						"set_block_property": {
+							"ms:strainer": 6
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='strainer_mesh2_stage2_item'&&query.block_property('ms:strainer')==1",
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound random.pop @a ~ ~ ~ 1 1"
+							]
+						},
+						"set_block_property": {
+							"ms:strainer": 7
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='strainer_mesh2_stage3_item'&&query.block_property('ms:strainer')==1",
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound random.pop @a ~ ~ ~ 1 1"
+							]
+						},
+						"set_block_property": {
+							"ms:strainer": 8
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='strainer_mesh2_stage4_item'&&query.block_property('ms:strainer')==1",
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound random.pop @a ~ ~ ~ 1 1"
+							]
+						},
+						"set_block_property": {
+							"ms:strainer": 9
+						}
+					}
+				]
+			},
+			"take_mesh": {
+				"sequence": [
+					{
+						"condition": "q.is_sneaking&&query.block_property('ms:strainer')==2",
+						"set_block_property": {
+							"ms:strainer": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot loot_strainer_mesh1_stage1"
+							]
+						}
+					},
+					{
+						"condition": "q.is_sneaking&&query.block_property('ms:strainer')==3",
+						"set_block_property": {
+							"ms:strainer": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot loot_strainer_mesh1_stage2"
+							]
+						}
+					},
+					{
+						"condition": "q.is_sneaking&&query.block_property('ms:strainer')==4",
+						"set_block_property": {
+							"ms:strainer": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot loot_strainer_mesh1_stage3"
+							]
+						}
+					},
+					{
+						"condition": "q.is_sneaking&&query.block_property('ms:strainer')==5",
+						"set_block_property": {
+							"ms:strainer": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot loot_strainer_mesh1_stage4"
+							]
+						}
+					},
+					{
+						"condition": "q.is_sneaking&&query.block_property('ms:strainer')==6",
+						"set_block_property": {
+							"ms:strainer": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot loot_strainer_mesh2_stage1"
+							]
+						}
+					},
+					{
+						"condition": "q.is_sneaking&&query.block_property('ms:strainer')==7",
+						"set_block_property": {
+							"ms:strainer": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot loot_strainer_mesh2_stage2"
+							]
+						}
+					},
+					{
+						"condition": "q.is_sneaking&&query.block_property('ms:strainer')==8",
+						"set_block_property": {
+							"ms:strainer": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot loot_strainer_mesh2_stage3"
+							]
+						}
+					},
+					{
+						"condition": "q.is_sneaking&&query.block_property('ms:strainer')==9",
+						"set_block_property": {
+							"ms:strainer": 1
+						},
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot loot_strainer_mesh2_stage4"
+							]
+						}
+					}
+				]
+			},
+			"spawn_loot": {
+				"sequence": [
+					{
+						"condition": "q.block_property('ms:strainer')==2||q.block_property('ms:strainer')==3||q.block_property('ms:strainer')==4||q.block_property('ms:strainer')==5&&q.block_neighbor_has_any_tag(0,1,0,'water')==1",
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot survivalist_strainer_loot"
+							]
+						}
+					},
+					{
+						"condition": "q.block_property('ms:strainer')==6||q.block_property('ms:strainer')==7||q.block_property('ms:strainer')==8||q.block_property('ms:strainer')==9&&q.block_neighbor_has_any_tag(0,1,0,'water')==1",
+						"run_command": {
+							"command": [
+								"loot spawn ~ ~1 ~ loot fishermen_strainer_loot"
+							]
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_property('ms:strainer')== 2",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.strainer",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "strainer_mesh1_stage1"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "take_mesh"
+					},
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "spawn_loot"
+						},
+						"range": [
+							45,
+							50
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('ms:strainer')== 3",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.strainer",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "strainer_mesh1_stage2"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "take_mesh"
+					},
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "spawn_loot"
+						},
+						"range": [
+							35,
+							40
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('ms:strainer')== 4",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.strainer",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "strainer_mesh1_stage3"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "take_mesh"
+					},
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "spawn_loot"
+						},
+						"range": [
+							25,
+							30
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('ms:strainer')== 5",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.strainer",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "strainer_mesh1_stage4"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "take_mesh"
+					},
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "spawn_loot"
+						},
+						"range": [
+							20,
+							15
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('ms:strainer')== 6",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.strainer",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "strainer_mesh2_stage1"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "take_mesh"
+					},
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "spawn_loot"
+						},
+						"range": [
+							45,
+							50
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('ms:strainer')== 7",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.strainer",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "strainer_mesh2_stage2"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "take_mesh"
+					},
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "spawn_loot"
+						},
+						"range": [
+							35,
+							40
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('ms:strainer')== 8",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.strainer",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "strainer_mesh2_stage3"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "take_mesh"
+					},
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "spawn_loot"
+						},
+						"range": [
+							25,
+							30
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('ms:strainer')== 9",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.strainer",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "strainer_mesh2_stage4"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "take_mesh"
+					},
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "spawn_loot"
+						},
+						"range": [
+							20,
+							15
+						]
+					}
+				}
+			}
+		]
+	}
+}

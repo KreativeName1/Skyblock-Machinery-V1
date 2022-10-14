@@ -1,0 +1,657 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:wooden_barrel",
+			"properties": {
+				"ms:wooden_barrel": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 1,
+			"minecraft:geometry": "geometry.barrel7",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "wood_barrel",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "fill"
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:entity_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					16,
+					12
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					16,
+					12
+				]
+			}
+		},
+		"events": {
+			"10": {
+				"sequence": [
+					{
+						"condition": "q.get_equipped_item_name=='bucket'&&query.block_property('ms:wooden_barrel')==10",
+						"set_block_property": {
+							"ms:wooden_barrel": 1
+						},
+						"run_command": {
+							"command": [
+								"give @p water_bucket",
+								"playsound bucket.fill_water @a ~ ~ ~"
+							]
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='dust'&&query.block_property('ms:wooden_barrel')==10",
+						"run_command": {
+							"command": [
+								"playsound use.gravel @a ~ ~ ~"
+							]
+						},
+						"decrement_stack": {},
+						"set_block_property": {
+							"ms:wooden_barrel": 11
+						}
+					}
+				]
+			},
+			"fill": {
+				"sequence": [
+					{
+						"condition": "q.get_equipped_item_name=='sapling'||q.get_equipped_item_name=='leaves2'||q.get_equipped_item_name=='rotten_flesh'||q.get_equipped_item_name=='leaves'&&query.block_property('ms:wooden_barrel')==1",
+						"set_block_property": {
+							"ms:wooden_barrel": 2
+						},
+						"run_command": {
+							"command": [
+								"playsound block.composter.fill @a ~ ~ ~"
+							]
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='sapling'||q.get_equipped_item_name=='leaves2'||q.get_equipped_item_name=='rotten_flesh'||q.get_equipped_item_name=='leaves'&&query.block_property('ms:wooden_barrel')==2",
+						"set_block_property": {
+							"ms:wooden_barrel": 3
+						},
+						"run_command": {
+							"command": [
+								"playsound block.composter.fill @a ~ ~ ~"
+							]
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='sapling'||q.get_equipped_item_name=='leaves2'||q.get_equipped_item_name=='rotten_flesh'||q.get_equipped_item_name=='leaves'&&query.block_property('ms:wooden_barrel')==3",
+						"set_block_property": {
+							"ms:wooden_barrel": 4
+						},
+						"run_command": {
+							"command": [
+								"playsound block.composter.fill @a ~ ~ ~"
+							]
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='sapling'||q.get_equipped_item_name=='leaves2'||q.get_equipped_item_name=='rotten_flesh'||q.get_equipped_item_name=='leaves'&&query.block_property('ms:wooden_barrel')==4",
+						"set_block_property": {
+							"ms:wooden_barrel": 5
+						},
+						"run_command": {
+							"command": [
+								"playsound block.composter.fill @a ~ ~ ~"
+							]
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='sapling'||q.get_equipped_item_name=='leaves2'||q.get_equipped_item_name=='rotten_flesh'||q.get_equipped_item_name=='leaves'&&query.block_property('ms:wooden_barrel')==5",
+						"set_block_property": {
+							"ms:wooden_barrel": 6
+						},
+						"run_command": {
+							"command": [
+								"playsound block.composter.fill @a ~ ~ ~"
+							]
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='sapling'||q.get_equipped_item_name=='leaves2'||q.get_equipped_item_name=='rotten_flesh'||q.get_equipped_item_name=='leaves'&&query.block_property('ms:wooden_barrel')==6",
+						"set_block_property": {
+							"ms:wooden_barrel": 7
+						},
+						"run_command": {
+							"command": [
+								"playsound block.composter.fill @a ~ ~ ~"
+							]
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='sapling'||q.get_equipped_item_name=='leaves2'||q.get_equipped_item_name=='rotten_flesh'||q.get_equipped_item_name=='leaves'&&query.block_property('ms:wooden_barrel')==7",
+						"set_block_property": {
+							"ms:wooden_barrel": 8
+						},
+						"run_command": {
+							"command": [
+								"playsound block.composter.fill @a ~ ~ ~"
+							]
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='water_bucket'&&query.block_property('ms:wooden_barrel')==1",
+						"set_block_property": {
+							"ms:wooden_barrel": 10
+						},
+						"run_command": {
+							"command": [
+								"give @p bucket",
+								"playsound bucket.empty_water @a ~ ~ ~"
+							]
+						},
+						"decrement_stack": {}
+					}
+				]
+			},
+			"transform": {
+				"condition": "query.block_property('ms:wooden_barrel') == 8",
+				"set_block_property": {
+					"ms:wooden_barrel": 9
+				},
+				"run_command": {
+					"command": [
+						"playsound block.composter.ready @a ~ ~ ~",
+						"loot spawn ~ ~1 ~ loot silk_worm"
+					]
+				}
+			},
+			"take_clay": {
+				"condition": "query.block_property('ms:wooden_barrel') == 11",
+				"run_command": {
+					"command": [
+						"loot spawn ~ ~1 ~ loot take_clay"
+					]
+				},
+				"set_block_property": {
+					"ms:wooden_barrel": 1
+				}
+			},
+			"take_dirt": {
+				"condition": "query.block_property('ms:wooden_barrel') == 9",
+				"set_block_property": {
+					"ms:wooden_barrel": 1
+				},
+				"run_command": {
+					"command": [
+						"loot spawn ~ ~1 ~ loot take_dirt"
+					]
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('ms:wooden_barrel') == 2",
+				"components": {
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.barrel1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wood_barrel_leave",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "fill"
+					},
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:wooden_barrel') == 3",
+				"components": {
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.barrel2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wood_barrel_leave",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "fill"
+					},
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:wooden_barrel') == 4",
+				"components": {
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.barrel3",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wood_barrel_leave",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "fill"
+					},
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:wooden_barrel') == 5",
+				"components": {
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.barrel4",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wood_barrel_leave",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "fill"
+					},
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:wooden_barrel') == 6",
+				"components": {
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.barrel5",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wood_barrel_leave",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "fill"
+					},
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:wooden_barrel') == 7",
+				"components": {
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.barrel6",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wood_barrel_leave",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "fill"
+					},
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:wooden_barrel') == 8",
+				"components": {
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.barrel7",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wood_barrel_leave",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "transform"
+						},
+						"range": [
+							30,
+							30
+						]
+					},
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:wooden_barrel') == 9",
+				"components": {
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.barrel7",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wood_barrel_dirt",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "take_dirt"
+					},
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:wooden_barrel') == 10",
+				"components": {
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.barrel7",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wood_barrel_water",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "10"
+					},
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:wooden_barrel') == 11",
+				"components": {
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.barrel7",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wood_barrel_clay",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "take_clay"
+					},
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							16,
+							12
+						]
+					}
+				}
+			}
+		]
+	}
+}

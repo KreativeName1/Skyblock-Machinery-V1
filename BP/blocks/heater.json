@@ -1,0 +1,98 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:heater",
+			"properties": {
+				"ms:heater": [
+					1,
+					2
+				]
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:destroy_time": 1,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "heater_off"
+				}
+			},
+			"minecraft:geometry": "geometry.heater",
+			"minecraft:on_interact": {
+				"event": "log"
+			}
+		},
+		"events": {
+			"log": {
+				"sequence": [
+					{
+						"condition": "q.get_equipped_item_name=='log'&&query.block_property('ms:heater')==1",
+						"decrement_stack": {},
+						"set_block_property": {
+							"ms:heater": 2
+						},
+						"run_command": {
+							"command": [
+								"playsound dig.nether_wart @a ~ ~ ~ 1 0.5"
+							]
+						}
+					}
+				]
+			},
+			"turn_off": {
+				"set_block_property": {
+					"ms:heater": 1
+				},
+				"run_command": {
+					"command": [
+						"playsound dig.nether_wart @a ~ ~ ~ 1 0.5"
+					]
+				}
+			},
+			"sound": {
+				"run_command": {
+					"command": [
+						"playsound block.campfire.crackle @a ~ ~ ~ 1 1"
+					]
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('ms:heater') == 2",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 1,
+					"minecraft:destroy_time": 1,
+					"minecraft:random_ticking": {
+						"on_tick": {
+							"event": "sound"
+						}
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "heater_on",
+							"face_dimming": false
+						}
+					},
+					"tag:heater": {},
+					"minecraft:geometry": "geometry.heater",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							120,
+							120
+						],
+						"on_tick": {
+							"event": "turn_off"
+						}
+					}
+				}
+			}
+		]
+	}
+}

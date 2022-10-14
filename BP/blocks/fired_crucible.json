@@ -1,0 +1,280 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:fired_crucible",
+			"properties": {
+				"ms:fired_crucible": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7
+				]
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:destroy_time": 1,
+			"minecraft:geometry": "geometry.crucible1",
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "fired_crucible"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "fill"
+			}
+		},
+		"events": {
+			"fill": {
+				"sequence": [
+					{
+						"condition": "q.get_equipped_item_name=='cobblestone'&&query.block_property('ms:fired_crucible')==1",
+						"set_block_property": {
+							"ms:fired_crucible": 2
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound hit.stone @a ~ ~ ~ 1 1.5 0.5"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='cobblestone'&&query.block_property('ms:fired_crucible')==2",
+						"set_block_property": {
+							"ms:fired_crucible": 3
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound hit.stone @a ~ ~ ~ 1 1.5 0.5"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='cobblestone'&&query.block_property('ms:fired_crucible')==3",
+						"set_block_property": {
+							"ms:fired_crucible": 4
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound hit.stone @a ~ ~ ~ 1 1.5 0.5"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='cobblestone'&&query.block_property('ms:fired_crucible')==4",
+						"set_block_property": {
+							"ms:fired_crucible": 5
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound hit.stone @a ~ ~ ~ 1 1.5 0.5"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='cobblestone'&&query.block_property('ms:fired_crucible')==5",
+						"set_block_property": {
+							"ms:fired_crucible": 6
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound hit.stone @a ~ ~ ~ 1 1.5 0.5"
+							]
+						}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='lava_bucket'&&query.block_property('ms:fired_crucible')==1",
+						"set_block_property": {
+							"ms:fired_crucible": 7
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.empty_lava @p ~ ~ ~",
+								"give @p bucket"
+							],
+							"target": "other"
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						}
+					}
+				]
+			},
+			"transform": {
+				"condition": "q.block_neighbor_has_any_tag(0,-1,0,'blaze_block') == 1 && query.block_property('ms:fired_crucible') == 7",
+				"set_block_property": {
+					"ms:fired_crucible": 7
+				},
+				"run_command": {
+					"command": [
+						"playsound random.fizz @a ~ ~ ~ 0.5 2"
+					]
+				}
+			},
+			"take_lava": {
+				"set_block_property": {
+					"ms:fired_crucible": 1
+				},
+				"run_command": {
+					"command": [
+						"playsound bucket.fill_lava @p ~ ~ ~",
+						"give @p lava_bucket"
+					],
+					"target": "other"
+				},
+				"decrement_stack": {
+					"ignore_game_mode": true
+				}
+			},
+			"effects": {
+				"condition": "query.block_property('ms:fired_crucible') == 7",
+				"run_command": {
+					"command": [
+						"playsound liquid.lavapop @a ~ ~ ~",
+						"particle minecraft:lava_particle ~ ~1 ~"
+					]
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('ms:fired_crucible') == 2",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.crucible1",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "lcruciblefill"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "fill"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:fired_crucible') == 3",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.crucible2",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "lcruciblefill"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "fill"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:fired_crucible') == 4",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.crucible3",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "lcruciblefill"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "fill"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:fired_crucible') == 5",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.crucible4",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "lcruciblefill"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "fill"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:fired_crucible') == 6",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 0,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.crucible5",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "lcruciblefill"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "transform",
+							"condition": "q.block_neighbor_has_any_tag(0,-1,0,'heater')==1"
+						},
+						"range": [
+							100,
+							120
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:fired_crucible') == 7",
+				"components": {
+					"minecraft:block_light_absorption": 0,
+					"minecraft:block_light_emission": 1,
+					"minecraft:destroy_time": 1,
+					"minecraft:geometry": "geometry.crucible5",
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "lcruciblelava"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "take_lava",
+						"condition": "query.get_equipped_item_name=='bucket'"
+					},
+					"minecraft:ticking": {
+						"looping": true,
+						"on_tick": {
+							"event": "effects"
+						},
+						"range": [
+							6,
+							10
+						]
+					}
+				}
+			}
+		]
+	}
+}

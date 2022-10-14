@@ -1,0 +1,19 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:unfired_crucible"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.crucible1",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "unfired_crucible",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 1
+		}
+	}
+}

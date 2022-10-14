@@ -1,0 +1,239 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ms:pulverizer",
+			"properties": {
+				"ms:pulverizer": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "pulverizer_empty"
+				}
+			},
+			"minecraft:geometry": "geometry.pulverizer_empty",
+			"minecraft:destroy_time": 1,
+			"minecraft:on_interact": {
+				"event": "place"
+			}
+		},
+		"events": {
+			"place": {
+				"sequence": [
+					{
+						"condition": "q.get_equipped_item_name=='iron_chunk'&&query.block_property('ms:pulverizer')==1",
+						"set_block_property": {
+							"ms:pulverizer": 2
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='copper_chunk'&&query.block_property('ms:pulverizer')==1",
+						"set_block_property": {
+							"ms:pulverizer": 3
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='gold_chunk'&&query.block_property('ms:pulverizer')==1",
+						"set_block_property": {
+							"ms:pulverizer": 4
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='emerald_chunk'&&query.block_property('ms:pulverizer')==1",
+						"set_block_property": {
+							"ms:pulverizer": 5
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "q.get_equipped_item_name=='diamond_chunk'&&query.block_property('ms:pulverizer')==1",
+						"set_block_property": {
+							"ms:pulverizer": 6
+						},
+						"decrement_stack": {}
+					}
+				]
+			},
+			"iron": {
+				"set_block_property": {
+					"ms:pulverizer": 1
+				},
+				"run_command": {
+					"command": [
+						"loot spawn ~ ~1 ~ loot chunk_ironloot"
+					]
+				}
+			},
+			"copper": {
+				"set_block_property": {
+					"ms:pulverizer": 1
+				},
+				"run_command": {
+					"command": [
+						"loot spawn ~ ~1 ~ loot chunk_copperloot"
+					]
+				}
+			},
+			"gold": {
+				"set_block_property": {
+					"ms:pulverizer": 1
+				},
+				"run_command": {
+					"command": [
+						"loot spawn ~ ~1 ~ loot chunk_goldloot"
+					]
+				}
+			},
+			"emerald": {
+				"set_block_property": {
+					"ms:pulverizer": 1
+				},
+				"run_command": {
+					"command": [
+						"loot spawn ~ ~1 ~ loot emeraldloot"
+					]
+				}
+			},
+			"diamond": {
+				"set_block_property": {
+					"ms:pulverizer": 1
+				},
+				"run_command": {
+					"command": [
+						"loot spawn ~ ~1 ~ loot diamondloot"
+					]
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('ms:pulverizer') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "pulverizer_iron"
+						}
+					},
+					"minecraft:geometry": "geometry.pulverizer_empty",
+					"minecraft:destroy_time": 1,
+					"minecraft:ticking": {
+						"range": [
+							8,
+							10
+						],
+						"looping": true,
+						"on_tick": {
+							"event": "iron"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:pulverizer') == 3",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "pulverizer_copper"
+						}
+					},
+					"minecraft:geometry": "geometry.pulverizer_empty",
+					"minecraft:destroy_time": 1,
+					"minecraft:ticking": {
+						"range": [
+							8,
+							10
+						],
+						"looping": true,
+						"on_tick": {
+							"event": "copper"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:pulverizer') == 4",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "pulverizer_gold"
+						}
+					},
+					"minecraft:geometry": "geometry.pulverizer_empty",
+					"minecraft:destroy_time": 1,
+					"minecraft:ticking": {
+						"range": [
+							8,
+							10
+						],
+						"looping": true,
+						"on_tick": {
+							"event": "gold"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:pulverizer') == 5",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "pulverizer_emerald"
+						}
+					},
+					"minecraft:geometry": "geometry.pulverizer_empty",
+					"minecraft:destroy_time": 1,
+					"minecraft:ticking": {
+						"range": [
+							8,
+							10
+						],
+						"looping": true,
+						"on_tick": {
+							"event": "emerald"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ms:pulverizer') == 6",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "alpha_test",
+							"texture": "pulverizer_diamond"
+						}
+					},
+					"minecraft:geometry": "geometry.pulverizer_empty",
+					"minecraft:destroy_time": 1,
+					"minecraft:ticking": {
+						"range": [
+							8,
+							10
+						],
+						"looping": true,
+						"on_tick": {
+							"event": "diamond"
+						}
+					}
+				}
+			}
+		]
+	}
+}
