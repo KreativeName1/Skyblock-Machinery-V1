@@ -1,0 +1,40 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:crate_sieve",
+			"category": "construction"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Sieve §8[Crate]§r"
+			},
+			"minecraft:icon": {
+				"texture": "crate"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "use"
+				}
+			},
+			"minecraft:max_stack_size": 10
+		},
+		"events": {
+			"use": {
+				"sequence": [
+					{
+						"decrement_stack": {
+							"ignore_game_mode": true
+						},
+						"run_command": {
+							"command": [
+								"give @p ms:sieve",
+								"playsound random.pop @p ~ ~ ~"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

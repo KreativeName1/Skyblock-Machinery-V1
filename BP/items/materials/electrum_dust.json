@@ -1,0 +1,18 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:electrum_dust"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:stacked_by_data": true,
+			"minecraft:icon": {
+				"texture": "electrum_dust"
+			},
+			"minecraft:display_name": {
+				"value": "Electrum Dust"
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:steel_gear"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "steel_gear"
+			},
+			"minecraft:display_name": {
+				"value": "Steel Gear"
+			}
+		}
+	}
+}

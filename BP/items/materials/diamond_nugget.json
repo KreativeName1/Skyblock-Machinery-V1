@@ -1,0 +1,19 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:diamond_nugget",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:stacked_by_data": true,
+			"minecraft:icon": {
+				"texture": "diamond_nugget"
+			},
+			"minecraft:display_name": {
+				"value": "Diamond Nugget"
+			}
+		}
+	}
+}

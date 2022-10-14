@@ -1,0 +1,19 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:gold_piece",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:stacked_by_data": true,
+			"minecraft:icon": {
+				"texture": "gold_piece"
+			},
+			"minecraft:display_name": {
+				"value": "Gold Piece"
+			}
+		}
+	}
+}

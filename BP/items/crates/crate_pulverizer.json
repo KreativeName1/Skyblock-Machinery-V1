@@ -1,0 +1,40 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ms:crate_pulverizer",
+            "category": "construction"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "crate"
+            },
+            "minecraft:display_name": {
+                "value": "Pulverizer §8[Crate]§r"
+            },
+            "minecraft:max_stack_size": 10,
+            "minecraft:on_use": {
+                "on_use": {
+                    "event": "use"
+                }
+            }
+        },
+        "events": {
+            "use": {
+                "sequence": [
+                    {
+                        "decrement_stack": {
+                            "ignore_game_mode": true
+                        },
+                        "run_command": {
+                            "command": [
+                                "give @p ms:pulverizer_empty",
+                                "playsound random.pop @p ~ ~ ~"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

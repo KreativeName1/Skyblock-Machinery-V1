@@ -1,0 +1,40 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:crate_heater",
+			"category": "construction"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "crate"
+			},
+			"minecraft:display_name": {
+				"value": "Heater §8[Crate]§r"
+			},
+			"minecraft:max_stack_size": 10,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "use"
+				}
+			}
+		},
+		"events": {
+			"use": {
+				"sequence": [
+					{
+						"decrement_stack": {
+							"ignore_game_mode": true
+						},
+						"run_command": {
+							"command": [
+								"give @p ms:heater",
+								"playsound random.pop @p ~ ~ ~"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

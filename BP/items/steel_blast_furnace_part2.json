@@ -1,0 +1,16 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:steel_blast_furnace_part2"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Steel Blast Furnace Part 2"
+			},
+			"minecraft:icon": {
+				"texture": "steel_blast_furnace_part2"
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:dried_mutton"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 6,
+				"saturation_modifier": "good"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:display_name": {
+				"value": "Dried Mutton"
+			},
+			"minecraft:icon": {
+				"texture": "dried_mutton"
+			}
+		}
+	}
+}

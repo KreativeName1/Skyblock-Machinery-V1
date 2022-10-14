@@ -1,0 +1,19 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:steel_casing",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 16,
+			"minecraft:stacked_by_data": true,
+			"minecraft:display_name": {
+				"value": "Steel Casing"
+			},
+			"minecraft:icon": {
+				"texture": "steel_casing"
+			}
+		}
+	}
+}

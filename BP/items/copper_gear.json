@@ -1,0 +1,18 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:copper_gear",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:stacked_by_data": true,
+			"minecraft:icon": {
+				"texture": "copper_gear"
+			},
+			"minecraft:display_name": {
+				"value": "Copper Gear"
+			}
+		}
+	}
+}
