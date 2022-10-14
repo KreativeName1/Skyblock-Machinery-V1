@@ -1,0 +1,73 @@
+pack.name=Skyblock Machinery RP V1
+pack.description=Skyblock Machinery RP V1
+pack.ms.name=Skyblock Machinery
+
+tile.ms:stone_barrel.name=Stone Barrel
+tile.ms:wooden_barrel.name=Wooden Barrel
+tile.ms:wooden_crucible.name=Wooden Crucible
+tile.ms:sieve.name=Sieve
+tile.ms:sieve_mesh_string.name=Sieve [String Mesh]
+tile.ms:sieve_mesh_iron.name=Sieve [Iron Mesh]
+tile.ms:sieve_mesh_diamond.name=Sieve [Diamond Mesh]
+tile.ms:fired_crucible.name=Fired Crucible
+tile.ms:ender_hopper.name=Ender Hopper
+tile.ms:unfired_crucible.name=Unfired Crucible
+tile.ms:dust.name=Dust
+entity.ms:auto_farmer_farm.name=Farmer
+tile.ms:drying_rack_empty.name=Drying Rack
+tile.ms:strainer_nomesh.name=Strainer
+tile.ms:simple_pulverizer.name=Simple Pulverizer
+tile.ms:handle.name=Hand Crank
+tile.ms:heater.name=Heater
+tile.ms:tank.name=Tank
+tile.ms:pulverizer.name=Pulverizer
+tile.ms:auto_farmer.name=Auto Farmer
+item.shears.name=Crook
+stile.ms:strainer.name=Strainer
+
+
+tile.ms:cobble_generator_stage1.name=Cobble Generator §c[Tier 1]
+tile.ms:cobble_generator_stage2.name=Cobble Generator §7[Tier 2]
+tile.ms:cobble_generator_stage3.name=Cobble Generator [Tier 3]
+tile.ms:cobble_generator_stage4.name=Cobble Generator §g[Tier 4]
+tile.ms:cobble_generator_stage5.name=Cobble Generator §3[Tier 5]
+
+tile.ms:steel_blast_furnace_iron0_coal0.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron0_coal1.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron0_coal2.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron0_coal3.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron0_coal4.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron1_coal0.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron1_coal1.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron1_coal2.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron1_coal3.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron1_coal4.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron2_coal0.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron2_coal1.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron2_coal2.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron2_coal3.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron2_coal4.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron3_coal0.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron3_coal1.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron3_coal2.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron3_coal3.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron3_coal4.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron4_coal0.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron4_coal1.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron4_coal2.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron4_coal3.name=Steel Blast Furnace
+tile.ms:steel_blast_furnace_iron4_coal4.name=Steel Blast Furnace
+
+tile.ms:auto_farmer_upgrade1.name=Auto Farmer §e[Tier 1]
+tile.ms:auto_farmer_upgrade2.name=Auto Farmer §6[Tier 2]
+tile.ms:auto_farmer_upgrade3.name=Auto Farmer §8[Tier 3]
+tile.ms:auto_farmer_upgrade4.name=Auto Farmer §0[Tier 4]
+
+
+
+
+
+
+
+
+
